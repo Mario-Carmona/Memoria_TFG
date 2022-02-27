@@ -1,0 +1,94 @@
+\chapter{Creación del servidor local}
+
+\section{Registro en ngrok}
+
+Pasos para tener ngrok:
+
+\begin{itemize}
+    \item Instalar ngrok mediante snap
+    
+\begin{lstlisting}
+snap install ngrok
+\end{lstlisting} 
+
+    \item Conectar ngrok a la cuenta
+  
+\begin{lstlisting}
+ngrok authtoken 25Pt1y3GT9JEnLudmofnYx6xvrS_2D2gZBpDpQGLhipQSfiHN
+\end{lstlisting}  
+
+
+Este comando generará un archivo de configuración llamado ngrok.yml
+
+    \item Reiniciar ngrok
+    
+Con el reinicio se harán efectivos los cambios.
+    
+\end{itemize}
+
+\section{Instalación requisitos}
+
+La instalación está detallada en el Readme
+
+\section{Creación del servidor}
+
+Pasos:
+
+\begin{itemize}
+    \item Generación del archivo package
+    
+\begin{lstlisting}
+$ npm init 
+\end{lstlisting}
+
+Este archivo package contendrá toda la información sobre la configuración del servidor. Se ejecuta el comando y se acepta toda la configuración por defecto que se va mostrando por pantalla.
+    
+    \item (Opcional) Modificar la configuración
+    
+Se modifica el archivo package, generado en el anterior paso,rellenando los campos dejados por defecto.
+
+    \item Creación del archivo index.js
+    
+En este primer archivo index.js he copiado las líneas de código que aparecen en la página de descarga de express (referencia a https://www.npmjs.com/package/express).
+
+\begin{lstlisting}
+const express = require('express')
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(puerto, () => {
+    console.log("Estamos ejecutando el servidor en el puerto " + puerto)
+});
+\end{lstlisting}
+
+Este será el código base sobre el que empezaré a crear mi servidor local.
+
+    \item Comprobación de conexión con el servidor
+    
+Para comprobar si el puerto no está siendo usado por otro servicio, ejecutamos el siguiente comando:
+
+\begin{lstlisting}
+$ npm index.js 
+\end{lstlisting}
+
+Tras ejecutar este comando, si accedemos desde el navegador a la URL http://localhost:3000/ deberíamos ver el mensaje de "Hello world". Si podemos ver ese mensaje quiere decir que ya está montado el servidor.
+
+    \item Abrir servidor a cualquier persona
+    
+Una vez tenemos el servidor montado, debemos abrirlo para el resto de usuarios, esto es posible con ngrok. Para utilizar ngrok se instala una extensión en Visual Studio Code (referencia a https://marketplace.visualstudio.com/items?itemName=philnash.ngrok-for-vscode).
+
+Una vez instalada la extensión, dentro de VS Code tecleamos Ctrl+Shift+P para abrir la ventana de atajos de teclado, y tecleamos el siguiente comando:
+
+\begin{lstlisting}
+>ngrok: start 
+\end{lstlisting}
+
+Después de ejecutar este comando se nos pedirá indicar el puerto que usará el servidor. En mi caso el puerto a usar es el 3000.
+
+Todo este proceso generará dinámicamente una URL para el servidor
+
+
+\end{itemize}
