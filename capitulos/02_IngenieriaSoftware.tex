@@ -1,0 +1,254 @@
+\chapter{Ingeniería del Software}
+
+La ingeniería del software es una disciplina de ingeniería que comprende todos los aspectos de la producción de software. La ingeniería del software busca que el software se pueda desarrollar en un plazo determinado y con el presupuesto previsto.
+
+El proceso de desarrollo de software implica lo que se conoce como ciclo de vida del software, que está formado por cuatro etapas: concepción, elaboración, construcción y la transición. Una vez que se completa este ciclo, entra en juego el mantenimiento del software.
+
+
+\section{Historias de Usuario}
+
+
+
+\section{Ingeniería de Requisitos}
+
+La Ingeniería de Requisitos (IR) cubre las tareas y proporciona las técnicas y mecanismos apropiados para:
+
+\begin{itemize}
+    \item Entender y analizar las necesidades del cliente
+    \item Evaluar la viabilidad de las necesidades
+    \item Negociar una solución razonable
+    \item Especificar la solución sin ambigüedades
+    \item Validar y analizar la especificación reflejada en el documento de especificación de requisitos
+    \item Administrar y controlar los requisitos a lo largo del proceso de desarrollo
+\end{itemize}
+
+El proceso de construcción de una ``especificación de Requisitos'' es un proceso iterativo, en el que partimos de especificaciones iniciales incompletas, poco claras o ambiguas y llegamos a especificaciones finales completas, claras, documentadas y validadas.
+
+La Ingeniería de Requisitos se divide en dos fases:
+
+\begin{itemize}
+    \item \textbf{Obtención de requisitos:} es la primera fase de este proceso, y también es el primer contacto con los clientes del sistema, en el caso de mi proyecto mi tutora ha adoptado el papel de cliente, y los usuarios por parte del desarrollador del sistema. Esta fase consiste en la realización de una serie de entrevistas, que pueden ser de distinta forma (libres, organizadas, etc) y duración. Estas entrevistas ayudarán a tener una idea clara del sistema a desarrollar.
+    \item \textbf{Especificación de requisitos:} es la segunda y última fase de este proceso. En esta fase consiste en tomar toda la información obtenida en las entrevistas y materializarla en una lista de requisitos. Esta lista estará compuesta de requisitos funcionales, no funcionales y de información. 
+\end{itemize}
+
+Todo este proceso definirá que hace el sistema que vamos a desarrollar, cuáles son sus propiedades emergente deseadas y esenciales, y las restricciones en el funcionamiento del sistema; pero que quede claro que no se define el cómo se desarrollará el sistema, esto se llevará a cabo en capítulos posteriores.
+
+Para que los requisitos obtenidos sean de calidad tienen que satisfacer las siguientes propiedades:
+
+\begin{itemize}
+    \item \textbf{Completos:} Todos los aspectos del sistema están representados en el modelo de requisitos
+    \item \textbf{Consistentes:} Los requisitos no se contradicen entre sí
+    \item \textbf{No ambiguos:} No se posible interpretar los requisitos de dos o más formas diferentes
+    \item \textbf{Correctos:} Representan exactamente el sistema que el cliente necesita y que el desarrollador construirá
+    \item \textbf{Realistas:} Los requisitos se pueden implementar con la tecnología y presupuesto disponible
+    \item \textbf{Verificable:} Se pueden diseñar pruebas para demostrar que el sistema satisface los requisitos
+    \item \textbf{Trazables:} Cada requisito puede rastrearse a través del desarrollo del software hasta su correspondiente funcionalidad del sistema
+\end{itemize}
+
+\subsection{Requisitos Funcionales}
+
+Los requisitos funcionales describen la interacción entre el sistema y su entorno, proporcionando servicios que proveerá el sistema o indicando la manera en que éste reaccionará ante determinados estímulos.
+
+\begin{itemize}
+    \item \textbf{RF-1. Gestión del contexto} \label{RF-1}
+    \begin{itemize}
+        \item \textbf{Descripción:} El sistema deberá mantener un contexto de la conversación mantenida entre el chatbot y el usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RNF-10]{RNF-10} \hyperref[RI-3]{RI-3}
+        \begin{itemize}
+            \item \textbf{RF-1.1. Extracción de la información}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá extraer del comentario del usuario información que pueda ser relevante para la elaboración de las siguientes respuestas del chatbot en la conversación
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+            
+            \item \textbf{RF-1.2. Actualización del contexto} \label{RF-1.2}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá mantener actualizado el contexto de la conversación usando toda la información extraída y la información guardada en ese momento. 
+                \item \textbf{Requisitos asociados:} \hyperref[RNF-2]{RNF-2} \hyperref[RNF-7]{RNF-7}
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{RF-2. Gestión de las conversaciones} \label{RF-2}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá realizar una gestión de la conversación entre el usuario y el propio chatbot
+        \item \textbf{Requisitos asociados:} \hyperref[RNF-1]{RNF-1} \hyperref[RNF-3]{RNF-3} \hyperref[RNF-4]{RNF-4} \hyperref[RNF-6]{RNF-6}
+        \begin{itemize}
+            \item \textbf{RF-2.1. Obtención de los comentarios del usuario} \label{RF-2.1}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá recopilar el comentario escrito del usuario
+                \item \textbf{Requisitos asociados:} \hyperref[RNF-8]{RNF-8} \hyperref[RNF-9]{RNF-9}
+            \end{itemize}
+            
+            \item \textbf{RF-2.2. Generación de la respuesta}\label{RF-2.2}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá transformar esos comentarios del usuario en una respuesta entendible por el usuario
+                \item \textbf{Requisitos asociados:} \hyperref[RNF-5]{RNF-5} \hyperref[RNF-9]{RNF-9} \hyperref[RNF-10]{RNF-10} \hyperref[RI-1]{RI-1}
+            \end{itemize}
+            
+            \item \textbf{RF-2.3. Envío de la respuesta} \label{RF-2.3}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá devolver la respuesta por el mismo canal que recibió el comentario del usuario
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{RF-3. Deducciones del usuario} \label{RF-3}
+    \begin{itemize}
+        \item \textbf{Descripción:} El sistema debe deducir información del usuario en base a la conversación con el usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RNF-11]{RNF-11} \hyperref[RNF-12]{RNF-12} \hyperref[RI-4]{RI-4}
+        \begin{itemize}
+            \item \textbf{RF-3.1. Deducción de la edad del usuario} \label{RF-3.1}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema debe deducir la edad \footnote{Los rangos de edad son los siguientes: niño/a (), adolescente () y adulto/a ()} en base a la conversación con el usuario
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+            
+            \item \textbf{RF-3.2. Deducción del género del usuario} \label{RF-3.2}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema debe deducir el género \footnote{Los géneros que se tiene en cuenta son masculino ó femenino} en base a la conversación con el usuario
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+            
+            \item \textbf{RF-3.3. Preguntar por el género del usuario} \label{RF-3.3}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá preguntar por el género del usuario si tras cierto tiempo el sistema es incapaz de deducir el género en base a la conversación que están teniendo
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+            
+            \item \textbf{RF-3.4. Preguntar por el rango de edad del usuario} \label{RF-3.4}
+            \begin{itemize}
+                \item \textbf{Descripción:} El sistema deberá preguntar por el rango de edad del usuario si tras cierto tiempo el sistema es incapaz de deducir el rango de edad en base a la conversación que están teniendo
+                \item \textbf{Requisitos asociados:} 
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Requisitos No funcionales}
+
+Los requisitos no funcionales describen cualidades o restricciones del sistema que no se relacionan de forma directa con el comportamiento funcional del mismo.
+
+\begin{itemize}
+    \item \textbf{RNF-1. Robustez ante cualquier mensaje} \label{RNF-1}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá responder siempre sin importar que mensaje envíe el usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2]{RF-2} \hyperref[RI-1]{RI-1}
+    \end{itemize}
+    
+    \item \textbf{RNF-2. Sin pérdida de información} \label{RNF-2}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot no deberá volver a preguntar sobre información que ya haya sido proporcionada por el usuario anteriormente en la conversación
+        \item \textbf{Requisitos asociados:} \hyperref[RF-1.2]{RF-1.2} \hyperref[RI-3]{RI-3}
+    \end{itemize}
+    
+    \item \textbf{RNF-3. Respuesta en tiempo real} \label{RNF-3}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá responder a todos los comentarios del usuario en tiempo real para que la conversación sea fluida y natural
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2]{RF-2}
+    \end{itemize}
+    
+    \item \textbf{RNF-4. Conversaciones concurrentes} \label{RNF-4}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot debe ser capaz de tener distintas conversaciones con distintos usuarios
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2]{RF-2}
+    \end{itemize}
+    
+    \item \textbf{RNF-5. Actualización de la temática} \label{RNF-5}
+    \begin{itemize}
+        \item \textbf{Descripción:} La temática del chatbot debe ser fácilmente actualizada para ampliar su contenido o para enfocarlo a otra temática distinta
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2.2]{RF-2.2} \hyperref[RI-1]{RI-1}
+    \end{itemize}
+    
+    \item \textbf{RNF-6. Escalabilidad del chatbot} \label{RNF-6}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot debe estar preparado para ser fácilmente escalado y tener la suficiente potencia para cumplir sus requisitos
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2]{RF-2}
+    \end{itemize}
+    
+    \item \textbf{RNF-7. Seguridad de los datos del usuario} \label{RNF-7}
+    \begin{itemize}
+        \item \textbf{Descripción:} Se deben mantener privados todos los datos proporcionados por el usuario durante su conversación con el chatbot
+        \item \textbf{Requisitos asociados:} \hyperref[RF-1.2]{RF-1.2} \hyperref[RI-3]{RI-3}
+    \end{itemize}
+    
+    \item \textbf{RNF-8. Envío de los comentarios del usuario} \label{RNF-8}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá permitir al usuario plasmar su comentario de forma escrita para ser recopilado
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2.1]{RF-2.1}
+    \end{itemize}
+    
+    \item \textbf{RNF-9. Formato de los mensajes} \label{RNF-9}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá mantener el formato, elegido por el usuario durante el envío de su comentario, cuando se disponga a responder al usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2.1]{RF-2.1} \hyperref[RF-2.3]{RF-2.3}
+    \end{itemize}
+    
+    \item \textbf{RNF-10. Conversaciones naturales} \label{RNF-10}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá mantener una conversación de forma natural, de tal forma que el usuario no sienta que está hablando con una máquina
+        \item \textbf{Requisitos asociados:} \hyperref[RF-1]{RF-1} \hyperref[RF-2.2]{RF-2.2} \hyperref[RI-2]{RI-2} \hyperref[RI-3]{RI-3}
+    \end{itemize}
+    
+    \item \textbf{RNF-11. Robustez ante el rango de edad del usuario} \label{RNF-11}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá conocer el rango de edad del usuario con el que está conversando antes de que termine la conversación
+        \item \textbf{Requisitos asociados:} \hyperref[RF-3]{RF-3} \hyperref[RI-4]{RI-4}
+    \end{itemize}
+    
+    \item \textbf{RNF-12. Robustez ante el género del usuario} \label{RNF-12}
+    \begin{itemize}
+        \item \textbf{Descripción:} El chatbot deberá conocer el género del usuario con el que está conversando antes de que termine la conversación
+        \item \textbf{Requisitos asociados:} \hyperref[RF-3]{RF-3} \hyperref[RI-4]{RI-4}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Requisitos de Información}
+
+Los requisitos de información describen necesidades de almacenamiento de información del sistema.
+
+\begin{itemize}
+    \item \textbf{RI-1. Preguntas temáticas} \label{RI-1}
+    \begin{itemize}
+        \item \textbf{Descripción:} Información sobre las distintas preguntas temáticas que se le pueden realizar al chatbot
+        \item \textbf{Contenido:} Temática de la pregunta, enunciado de la pregunta, respuesta a la pregunta
+        \item \textbf{Requisitos asociados:} \hyperref[RF-2.2]{RF-2.2} \hyperref[RNF-1]{RNF-1} \hyperref[RNF-5]{RNF-5}
+    \end{itemize}
+    
+    \item \textbf{RI-2. Características del chatbot} \label{RI-2}
+    \begin{itemize}
+        \item \textbf{Descripción:} Descripción de aspectos que definen al chatbot
+        \item \textbf{Contenido:} Nombre del chatbot, actitud del chatbot
+        \item \textbf{Requisitos asociados:} \hyperref[RNF-10]{RNF-10}
+    \end{itemize}
+    
+    \item \textbf{RI-3. Contexto de la conversación} \label{RI-3}
+    \begin{itemize}
+        \item \textbf{Descripción:} Información proporcionada por el usuario durante su conversación con el chatbot
+        \item \textbf{Contenido:} Nombre del usuario, rango de edad del usuario, información personal proporcionado por el usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RF-1]{RF-1} \hyperref[RNF-2]{RNF-2} \hyperref[RNF-7]{RNF-7} \hyperref[RNF-10]{RNF-10}
+    \end{itemize}
+    
+    \item \textbf{RI-4. Información personal del usuario} \label{RI-4}
+    \begin{itemize}
+        \item \textbf{Descripción:} Información personal del usuario deducida por el sistema durante su conversación con el chatbot
+        \item \textbf{Contenido:} Rango de edad del usuario, género del usuario
+        \item \textbf{Requisitos asociados:} \hyperref[RF-3]{RF-3} \hyperref[RNF-11]{RNF-11} \hyperref[RNF-12]{RNF-12}
+    \end{itemize}
+\end{itemize}
+
+
+\section{Modelo del Análisis}
+
+
+\subsection{Diagramas de Casos de Uso}
+
+
+
+\subsection{Diagramas de actividad}
+
+
+
+
+

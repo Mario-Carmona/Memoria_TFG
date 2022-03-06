@@ -24,6 +24,7 @@
 \usepackage{afterpage}
 
 \usepackage{longtable}
+\usepackage[usenames]{color}
 
 \usepackage[pdfborder={000}]{hyperref} %referencia
 
@@ -65,8 +66,14 @@ pdfproducer = {pdflatex}
 %\usepackage{pdfpages}
 \usepackage{url}
 \usepackage{colortbl,longtable}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage[stable]{footmisc}
 %\usepackage{index}
+
+\usepackage{amssymb}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 
 %\makeindex
 %\usepackage[style=long, cols=2,border=plain,toc=true,number=none]{glossary}
@@ -184,11 +191,9 @@ pdfproducer = {pdflatex}
 %\mainmatter
 %\setlength{\parskip}{5pt}
 
-\input{capitulos/servidor_local}
-
 \input{capitulos/01_Introduccion}
 
-\input{capitulos/02_EspecificacionRequisitos}
+\input{capitulos/02_IngenieriaSoftware}
 
 \input{capitulos/03_Planificacion}
 

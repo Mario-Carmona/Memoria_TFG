@@ -1,11 +1,6 @@
 \chapter{Análisis}
 
 
-\section{Arquitectura Modelo-Vista-Controlador}
-
-
-
-
 \section{Tecnologías de desarrollo}
 
 Un aspecto a tener en cuenta a la hora de elegir una plataforma para desarrollar un chatbot es que existen dos elementos en esta creación.
@@ -73,7 +68,7 @@ Si se elige la opción de usar intérpretes y bibliotecas de código abierto dis
     \item Java $\rightarrow$ Program AB
 \end{itemize}
 
-Si se elige la opción de usar servicios web como Pandorabots, uno de los más populares actualmente, se podrá alojar el chatbot en la plataforma y se podrá hacer uso de todas sus funcionalidades. Si nos centramos en Pandorabots disponemos de un editor de AIML, un editor de interfaces, control de versiones a través de Github, chatlogs, conversor de texto a voz y viceversa, posiblidad de añadir un personaje 3D como interación con el chatbot, integración con RESTful APIs y muchos más, según se indica en su página oficial (referencia a https://developer.pandorabots.com/).
+Si se elige la opción de usar servicios web como Pandorabots, uno de los más populares actualmente, se podrá alojar el chatbot en la plataforma y se podrá hacer uso de todas sus funcionalidades. Si nos centramos en Pandorabots disponemos de un editor de AIML, un editor de interfaces, control de versiones a través de Github, chatlogs, conversor de texto a voz y viceversa, posiblidad de añadir un personaje 3D como interación con el chatbot, integración con RESTful APIs y muchos más, según se indica en su página oficial \cite{RefWorks:RefID:14-pandorabots:}.
 
 Muchas de estas funcionalidades depende del tipo de cuenta que se disponga en Pandorabots.
 
@@ -82,7 +77,10 @@ Muchas de estas funcionalidades depende del tipo de cuenta que se disponga en Pa
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{imagenes/04_Analisis/cuentas_pandorabots.png}
-    \caption{Cuentas disponibles en Pandorabots (Fuente: developer.pandorabots.com)}
+    \begin{center}
+        Fuente: \url{https://developer.pandorabots.com/home.html}
+    \end{center}
+    \caption{Cuentas disponibles en Pandorabots}
     \label{fig:cuenta_pandorabots}
 \end{figure}
 
@@ -111,9 +109,9 @@ Pero si optamos por framework de código abierto hay una multitud de posibilidad
 Algunos ejemplos de chatbot implementados con AIML son los siguientes:
 
 \begin{itemize}
-    \item \textbf{Rosie}. Chatbot base basado en ALICE 2.0 . (Enlace a https://github.com/pandorabots/rosie)
-    \item \textbf{Programa-Y}. Chatbot basaso en Python 3.x y AIML 2.0 . (Enlace a https://github.com/keiffster/program-y)
-    \item \textbf{Cathy}. Chatbot para Discord basado en Python 3 y AIML (Enlace a https://github.com/DevDungeon/Cathy)
+    \item \textbf{Rosie}. Chatbot base basado en ALICE 2.0 \footnote{\url{https://github.com/pandorabots/rosie}}
+    \item \textbf{Programa-Y}. Chatbot basaso en Python 3.x y AIML 2.0 \footnote{\url{https://github.com/keiffster/program-y}}
+    \item \textbf{Cathy}. Chatbot para Discord basado en Python 3 y AIML \footnote{\url{https://github.com/DevDungeon/Cathy}}
 \end{itemize}
 
 
@@ -121,7 +119,7 @@ Algunos ejemplos de chatbot implementados con AIML son los siguientes:
 
 \subsubsection*{Información general}
 
-IBM Watson es un portfolio de IBM de aplicaciones, herramientas y soluciones preparadas para la empresa, diseñado para reducir los costes y los obstáculos de IA, además de optimizar los resultados y el uso responsable de la IA según se indica en su página oficial (referencia a https://www.ibm.com/es-es/watson). Aunque en un inicio IBM Watson no era lo que es ahora actualmente y tampoco se buscaba llegar a este punto. Originalmente IBM Watson surgío como el siguiente gran desafío de la empresa IBM, tras haber salido victorioso de otros grandes desafíos como la victoria de Deep Blue contra Garry Kasparov y el desafío de la supercomputadora Blue Gene. El objetivo que perseguía en sus orígenes Watson era conseguir ganar a competidores humanos en el concurso Jeopardy. Este concurso de televisión estadounidense consistía en un concurso de preguntas sobro una multitud de temas, y los concursantes deberán resolver las preguntas de cada prueba realizando preguntas sobre las pistas que va dando el presentador. Las reglas del concurso obligan a que Watson no sólo sepa conocimientos sobre los temas que se utilizan en el concurso, sino también ha saber realizar preguntas al presentador en base a sus pistas, y además saber distinguir cuando la pista del presentador no es cierta. Todas estos requisitos convierten el ganar este concurso en un gran desafío, la empresa IBM se embarco en este proyecto a mediados de la década del 2000. Finalmente en el año 2011 se llegó a un acuerdo para la realización del programa, donde compitieron dos grandes exconcursantes del programa como son Ken Jennings y Brad Rutter contra Watson. Tal y como se indica en el articulo (referecia a https://www.techrepublic.com/article/ibm-watson-the-inside-story-of-how-the-jeopardy-winning-supercomputer-was-born-and-what-it-wants-to-do-next/), Watson ganó el juego con \$77,147 , dejando a Rutter y Jennings con \$21,600 y \$24,000 respectivamente.
+IBM Watson es un portfolio de IBM de aplicaciones, herramientas y soluciones preparadas para la empresa, diseñado para reducir los costes y los obstáculos de IA, además de optimizar los resultados y el uso responsable de la IA según se indica en su página oficial \cite{RefWorks:RefID:15-2021ibm}. Aunque en un inicio IBM Watson no era lo que es ahora actualmente y tampoco se buscaba llegar a este punto. Originalmente IBM Watson surgío como el siguiente gran desafío de la empresa IBM, tras haber salido victorioso de otros grandes desafíos como la victoria de Deep Blue contra Garry Kasparov y el desafío de la supercomputadora Blue Gene. El objetivo que perseguía en sus orígenes Watson era conseguir ganar a competidores humanos en el concurso Jeopardy. Este concurso de televisión estadounidense consistía en un concurso de preguntas sobro una multitud de temas, y los concursantes deberán resolver las preguntas de cada prueba realizando preguntas sobre las pistas que va dando el presentador. Las reglas del concurso obligan a que Watson no sólo sepa conocimientos sobre los temas que se utilizan en el concurso, sino también ha saber realizar preguntas al presentador en base a sus pistas, y además saber distinguir cuando la pista del presentador no es cierta. Todas estos requisitos convierten el ganar este concurso en un gran desafío, la empresa IBM se embarco en este proyecto a mediados de la década del 2000. Finalmente en el año 2011 se llegó a un acuerdo para la realización del programa, donde compitieron dos grandes exconcursantes del programa como son Ken Jennings y Brad Rutter contra Watson. Tal y como se indica en el articulo \cite{RefWorks:RefID:16-best2013ibm}, Watson ganó el juego con \$77,147 , dejando a Rutter y Jennings con \$21,600 y \$24,000 respectivamente.
 
 Tras la victoria de IBM Watson, se empezó a enfocar y rediseñar a Watson hacia distintos sectores como la medicina, la banca ó los agentes conversacionales entre otras. Los agentes conversacionales es el sector que nos interesa investigar.
 
@@ -131,7 +129,7 @@ Otro característica de Watson es su procesamiento del lenguaje natural. Al igua
 
 Y por último destaca que Watson trabaja con cualquier servicio en la nube, lo que facilita su integración en las empresas, ya que no será un impedimento el lugar donde residan los datos de la empresa. Y además el trabajar en cloud facilitará el trabajo con los datos.
 
-En concreto en la página oficial de IBM Watson Assistant (referencia a https://www.ibm.com/es-es/products/watson-assistant) se destaca la rentabilidad del producto, de hasta un 337\% según el Informe TEI de Forrester (referencia a El Total Economic Impact™ de IBM Watson Assistant); su precisión, de hasta un 14,7\% superior que las soluciones de la competencia según un reciente estudio publicado sobre machine learning (referencia a https://www.ibm.com/blogs/watson/2020/12/watson-assistant-improves-intent-detection-accuracy-leads-against-ai-vendors-cited-in-published-study/); y su fiabilidad, ya que Watson tiene más de 1000 despliegues de clientes en todos los sectores.
+En concreto en la página oficial de IBM Watson Assistant \cite{RefWorks:RefID:17-ibm} se destaca la rentabilidad del producto, de hasta un 337\% según el Informe TEI de Forrester \cite{RefWorks:RefID:8-iles2020el}; su precisión, de hasta un 14,7\% superior que las soluciones de la competencia según un reciente estudio publicado sobre machine learning \cite{RefWorks:RefID:18-2020watson}; y su fiabilidad, ya que Watson tiene más de 1000 despliegues de clientes en todos los sectores.
 
 
 
@@ -152,14 +150,17 @@ IBM Watson está pensado para ser utilizado por cualquier persona, da igual que 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.0\textwidth]{imagenes/04_Analisis/editor_IBM_Watson.png}
-    \caption{Editor de IBM Watson (Fuente: ibm.com/es-es/products/watson-assistant)}
+    \begin{center}
+        Fuente: \url{https://www.ibm.com/es-es/products/watson-assistant}
+    \end{center}
+    \caption{Editor de IBM Watson}
 \end{figure}
 
 La IA del chatbot es capaz de comprender un tema en cualquier lenguaje natural con unas pocas frases facilitando la adaptación del chatbot a la funcionalidad que se le quiera dar, adaptándose de forma rápida y precisa al dominio del proyecto.
 
 \subsubsection*{Extensibilidad}
 
-Como se ha indicado en apartados anteriores, IBM Watson es un portfolio de IBM de aplicaciones. En su página oficial (referencia a https://www.ibm.com/es-es/watson/products-services) se indican las siguientes aplicaciones con las que se puede integrar el chatbot:
+Como se ha indicado en apartados anteriores, IBM Watson es un portfolio de IBM de aplicaciones. En su página oficial \cite{RefWorks:RefID:19-2021productos} se indican las siguientes aplicaciones con las que se puede integrar el chatbot:
 
 \begin{itemize}
     \item IBM Watson Discovery
@@ -186,10 +187,10 @@ El chatbot se puede integrar como un chat web, como contestador de llamadas de t
 Algunos ejemplos de chatbot implementados con Watson son los siguientes:
 
 \begin{itemize}
-    \item \textbf{Nanci. Chatbot desarrollado por la empresa GM Financial}. (Referencia a https://www.gmfinancial.com/en-us/company/newsroom/chatbot.html)
-    \item \textbf{Chatbot desarrollado por la empresa Bradesco}. (Referencia a https://www.ibm.com/watson/stories/bradesco)
-    \item \textbf{CARL. Chatbot desarrollado por la empresa Siemens}. (Referencia a https://www.ibm.com/es-es/products/watson-assistant/client-stories)
-    \item \textbf{Chatbot desarrollado por la empresa Humana}. (Referencia a https://www.ibm.com/watson/stories/humana)
+    \item \textbf{Nanci. Chatbot desarrollado por la empresa GM Financial} \footnote{\url{https://www.gmfinancial.com/en-us/company/newsroom/chatbot.html}}
+    \item \textbf{Chatbot desarrollado por la empresa Bradesco} \footnote{\url{https://www.ibm.com/watson/stories/bradesco}}
+    \item \textbf{CARL. Chatbot desarrollado por la empresa Siemens} \footnote{\url{https://www.ibm.com/es-es/products/watson-assistant/client-stories}}
+    \item \textbf{Chatbot desarrollado por la empresa Humana} \footnote{\url{https://www.ibm.com/watson/stories/humana}}
 \end{itemize}
 
 
@@ -205,7 +206,7 @@ Algunos ejemplos de chatbot implementados con Watson son los siguientes:
 
 \subsubsection*{Información general}
 
-Dialogflow pertenece a la empresa Google, aunque no fue desarrollada originalmente por ella. Google adquirío API.AI en el año 2016 y le cambió el nombre a Dialogflow. Desde su adquisición Google a mejorado Dialogflow gracias a sus técnicas de IA de gran calidad. Esta plataforma es una de las más utilizadas para la creación de chatbots junto con IBM Watson, aunque a diferencia de Watson, Dialogflow está enfocado tanto para el mundo empresarial como para usuarios particulares que están empezando en el mundo de los chatbots. Esta variedad en la complejidad del chatbot es posible gracias a una interfaz que permite crear un chatbot con unos mínimos conocimientos técnicos, sólo será necesario introducir las frases de las preguntas y de las respuestas para construir el chatbot. Y si se quiere crear un chatbot más complejo podemos introducirnos en la configuración del chatbot o integrar más funcionalidades que aumenten su complejidad.
+Dialogflow pertenece a la empresa Google, aunque no fue desarrollada originalmente por ella. Google adquirió API.AI en el año 2016 y le cambió el nombre a Dialogflow. Desde su adquisición Google a mejorado Dialogflow gracias a sus técnicas de IA de gran calidad. Esta plataforma es una de las más utilizadas para la creación de chatbots junto con IBM Watson, aunque a diferencia de Watson, Dialogflow está enfocado tanto para el mundo empresarial como para usuarios particulares que están empezando en el mundo de los chatbots. Esta variedad en la complejidad del chatbot es posible gracias a una interfaz que permite crear un chatbot con unos mínimos conocimientos técnicos, sólo será necesario introducir las frases de las preguntas y de las respuestas para construir el chatbot. Y si se quiere crear un chatbot más complejo podemos introducirnos en la configuración del chatbot o integrar más funcionalidades que aumenten su complejidad.
 
 Dentro de Dialogflow existen dos tipos de agentes, los Agentes de ES y los agentes de CX. Dentro de los agentes de ES existen dos ediciones, la edición de prueba y la edición Essentials. Con la versión de prueba no se puede acceder a los servicios de Google Cloud, pero las entradas y salidas son gratuitas; mientras que con la versión Essentials si se puede acceder a esos servicios, pero las entrada y salidas del agente empezarán a costar dinero. Entre la versión Essentials y la versión CX la principal diferencia es que en la versión CX la relación entre los intents se define mediante un diagrama de flujo, mientras que en la versión Essential la relación entre los intents se define mediante los contextos. La limitación de los contextos es que no posibilitan la relación de varios intents con otro intent. La versión CX ha sido lanzada hace pocos unos pocos meses por lo que es algo novedosa y es útil para aquellos que quieran realizar un chatbot algo más complejo o que ya tengan experiencia con la plataforma. La versión Essentials está más enfocada a agentes de complejidad media y la versión CX está más enfocada a agentes de complejidad alta. Aunque la curva de aprendizaje es más suave en la edición CX, la edición CX no dispone actualmente de todas las funcionalidades presentes en la edición Essentials.
 
@@ -239,9 +240,9 @@ El chatbot se puede integrar en canales de telefonía, como Twilio; en canales d
 Algunos ejemplos de chatbot implementados con Dialogflow son los siguientes:
 
 \begin{itemize}
-    \item \textbf{SAM. Chatbot desarrollado por la empresa Ubisoft}. (Referencia a https://www.hd-tecnologia.com/ubisoft-ia-personal-sam-primer-asistente-gaming)
-    \item \textbf{Chatbot desarrollado por la empresa Dominos Pizza}. (Referencia a Articulo Dominos)
-    \item \textbf{Chatbot desarrollado por la empresa Malaysia Airlines}. (Referencia a https://cloud.google.com/customers/malaysia-airlines)
+    \item \textbf{SAM. Chatbot desarrollado por la empresa Ubisoft} \footnote{\url{https://www.hd-tecnologia.com/ubisoft-ia-personal-sam-primer-asistente-gaming}}
+    \item \textbf{Chatbot desarrollado por la empresa Dominos Pizza} \footnote{Caso de estudio de Dominos Pizza \cite{RefWorks:RefID:10-domino's-case-study}}
+    \item \textbf{Chatbot desarrollado por la empresa Malaysia Airlines} \footnote{\url{https://cloud.google.com/customers/malaysia-airlines}}
 \end{itemize}
 
 
@@ -255,7 +256,7 @@ Algunos ejemplos de chatbot implementados con Dialogflow son los siguientes:
 
 Rasa Stack es un conjunto de herramientas de aprendizaje automático de código abierto para el desarrollo de chatbots. Rasa Stack está desarrollado por una comunidad de personas pertenecientes a muchos lugares del mundo, de modo que esta plataforma a diferencia de las dos anteriores, no está respaldado por ninguna de las grandes empresas tecnológicas como pueden ser Google o IBM. Pero esto no quiere decir que no sea una buena plataforma, ya que ha sido probada por grandes empresas como AIRBUS, TOYOTA ó Adobe.
 
-En su página oficial (referencia a https://rasa.com) se destaca la gran personalización que pueden alcanzar los chatbots en esta plataforma.
+En su página oficial \cite{RefWorks:RefID:20-2020rasa} se destaca la gran personalización que pueden alcanzar los chatbots en esta plataforma.
 
 Dentro de Rasa Stack se pueden distinguir dos tipos de cuenta, la cuenta para empresas (Rasa Enterprise) y la cuenta gratuita (Rasa Open Source ó Rasa X). La diferencia entre Rasa Open Source y Rasa X es que Rasa X no es de código abierto, mientras que Rasa Open Source, como indica su nombre, si es de código abierto. La cuenta para empresas proporciona funcionalidades muy útiles para productos empresariales como pueden ser realizar análisis del chatbot, acceso con roles a la plataforma, disponibilidad de un soporte de calidad, y mucho más.
 
@@ -276,16 +277,16 @@ La transparencia que tienen los chatbots permiten conectar con él muchas APIs e
 
 \subsubsection*{Integración}
 
-Tal y como se indica en su página oficial (referencia a https://rasa.com), un chatbot creado con Rasa Stack se puede integrar en canales como IVR, chat y SMS. Además se indica que Rasa Stack admite 10 canales de mensajería integrados, como pueden ser Telegram, Facebook Messenger, Slack y algunos más; y que adicionalmente proporciona un punto de conexión con cualquier plataforma de comunicación, como puede ser un servidor web.
+Tal y como se indica en su página oficial \cite{RefWorks:RefID:20-2020rasa}, un chatbot creado con Rasa Stack se puede integrar en canales como IVR, chat y SMS. Además se indica que Rasa Stack admite 10 canales de mensajería integrados, como pueden ser Telegram, Facebook Messenger, Slack y algunos más; y que adicionalmente proporciona un punto de conexión con cualquier plataforma de comunicación, como puede ser un servidor web.
 
 \subsubsection*{Ejemplos}
 
 Algunos ejemplos de chatbot implementados con Rasa Stack son los siguientes:
 
 \begin{itemize}
-    \item \textbf{Djingo. Chatbot desarrollado por la empresa Orange}. (Referencia a https://rasa.com/customers/orange)
-    \item \textbf{Chatbot desarrollado por la empresa TMobile}. (Referencia a https://rasa.com/customers/t-mobile)
-    \item \textbf{Chatbot desarrollado por la empresa Helvetia}. (Referencia a https://rasa.com/customers/helvetia)
+    \item \textbf{Djingo. Chatbot desarrollado por la empresa Orange} \footnote{\url{https://rasa.com/customers/orange}}
+    \item \textbf{Chatbot desarrollado por la empresa TMobile} \footnote{\url{https://rasa.com/customers/t-mobile}}
+    \item \textbf{Chatbot desarrollado por la empresa Helvetia} \footnote{\url{https://rasa.com/customers/helvetia}}
 \end{itemize}
 
 
@@ -299,7 +300,7 @@ Algunos ejemplos de chatbot implementados con Rasa Stack son los siguientes:
 
 \subsubsection*{Información general}
 
-GPT-3 (Generative Pre-trained Transformer 3) es un conjunto de modelos de inteligencia artificial desarrollado por la empresa OpenAI en el año 2020. Este modelo es la tercera generación de estos modelos de inteligencia artificial. Este último modelo tiene 175 billones de parámetros, lo cuál es una potencia impresionante que le permite generar texto que parece escrito por humanos y no por máquinas, es incluso capaz de escribir código. Este modelo se ha visto potenciado por la inversión de Microsoft entre otros. Este modelo ha revolucionado el procesamiento y la generación de lenguaje natural. Esta última generación es de pago, cobrando cada cierta cantidad de tokens analizados, en concreto cada 1000 tokens actualmente según se indica en su página de precios (referencia a https://openai.com/api/pricing/). Un token es un conjunto de palabras ó un conjunto de letras, su tamaño depende también del lenguaje que se esté usando. Si se quiere saber más sobre los tokens se puede usar la herramienta Tokenizer (referencia a https://beta.openai.com/tokenizer), que nos proporciona OpenAI, para calcular el número de tokens en una frase. Algo importante es que sólo se paga por lo que se usa, no como en otras páginas que independientemente de lo que se use un servicio se paga una cuota fija.
+GPT-3 (Generative Pre-trained Transformer 3) es un conjunto de modelos de inteligencia artificial desarrollado por la empresa OpenAI en el año 2020. Este modelo es la tercera generación de estos modelos de inteligencia artificial. Este último modelo tiene 175 billones de parámetros, lo cuál es una potencia impresionante que le permite generar texto que parece escrito por humanos y no por máquinas, es incluso capaz de escribir código. Este modelo se ha visto potenciado por la inversión de Microsoft entre otros. Este modelo ha revolucionado el procesamiento y la generación de lenguaje natural. Esta última generación es de pago, cobrando cada cierta cantidad de tokens analizados, en concreto cada 1000 tokens actualmente según se indica en su página de precios (referencia a https://openai.com/api/pricing/). Un token es un conjunto de palabras ó un conjunto de letras, su tamaño depende también del lenguaje que se esté usando. Si se quiere saber más sobre los tokens se puede usar la herramienta Tokenizer \footnote{\url{https://beta.openai.com/tokenizer}}, que nos proporciona OpenAI, para calcular el número de tokens en una frase. Algo importante es que sólo se paga por lo que se usa, no como en otras páginas que independientemente de lo que se use un servicio se paga una cuota fija.
 
 Como se ha indicado anteriormente, GPT-3 es un conjunto de modelos. Según se indica en su página web (referencia a https://beta.openai.com/docs/engines/gpt-3) existen los siguientes modelos:
 
@@ -338,7 +339,7 @@ Un problema de GPT-3 es que se trata de una herramienta muy cara, ya que necesit
 
 \subsubsection*{Uso}
 
-Dado que GPT-3 es un modelo de aprendizaje, a diferencia de las plataformas vistas anteriormente como Dialogflow entre otras, para poder crear un chatbot será necesario hacer uso de un lenguaje de programación como Python para elaborar el chatbot. En la sección de bibliotecas de OpenAI (referencia a https://beta.openai.com/docs/libraries/libraries) se pueden encontrar todas las bibliotecas, tanto oficiales como de la comunidad, para poder usar GPT-3 con distintos lenguajes de programación.
+Dado que GPT-3 es un modelo de aprendizaje, a diferencia de las plataformas vistas anteriormente como Dialogflow entre otras, para poder crear un chatbot será necesario hacer uso de un lenguaje de programación como Python para elaborar el chatbot. En la sección de bibliotecas de OpenAI \footnote{https://beta.openai.com/docs/libraries/libraries} se pueden encontrar todas las bibliotecas, tanto oficiales como de la comunidad, para poder usar GPT-3 con distintos lenguajes de programación.
 
 El chatbot consistirá en sucesivas llamadas a la API de OpenAI para obtener las respuestas del chatbot. A continuación se puede observar el código en Python necesario para realizar una llamada a la API:
 
@@ -352,7 +353,7 @@ openai.Completion.create(
 \end{lstlisting}  
 \caption{Ejemplo de llamada a la API de OpenAI (Fuente: https://openai.com/api)}
 
-También se puede hacer uso del Playground (referencia a https://beta.openai.com/playground) de OpenAI para usar las distintas funcionalidades de GPT-3.
+También se puede hacer uso del Playground \footnote{https://beta.openai.com/playground} de OpenAI para usar las distintas funcionalidades de GPT-3.
 
 GPT-3 ha sido entrenado con millones de datos, pero dispone de una herramienta para enfocar su modelo a los datos que vayamos a utilizar en nuestro chatbot. Esta herramienta es el fine-tuning, que consiste en seguir entrenando el modelo con un conjunto de datos durante un cierto número de épocas, a elección del creador del chatbot, permitiendo generar textos relacionados con el dominio del chatbot.
 
@@ -385,9 +386,9 @@ La integración no es tan sencilla como podría ser en plataformas como Dialogfl
 Algunos ejemplos de chatbot implementados con GPT-3 son los siguientes:
 
 \begin{itemize}
-    \item \textbf{Chatbot para Telegram}. (Referencia a https://github.com/xwarfare/GPT3-Telegram-Chatbot)
-    \item \textbf{Chatbot para WhatsApp}. (Referencia a https://github.com/theshanergy/whatbot)
-    \item \textbf{Marcus. Chatbot para guía de viajes}. (Referencia a https://github.com/manan-paneri-99/marcus-gpt3-bot)
+    \item \textbf{Chatbot para Telegram} \footnote{https://github.com/xwarfare/GPT3-Telegram-Chatbot}
+    \item \textbf{Chatbot para WhatsApp} \footnote{https://github.com/theshanergy/whatbot}
+    \item \textbf{Marcus. Chatbot para guía de viajes} \footnote{https://github.com/manan-paneri-99/marcus-gpt3-bot}
 \end{itemize}
 
 
@@ -401,11 +402,11 @@ Algunos ejemplos de chatbot implementados con GPT-3 son los siguientes:
 
 \subsubsection*{Información general}
 
-Ante la privatización de GPT-3 han ido surgiendo alternativas de código abierto. Una de las más potentes hasta el momento es GPT-J, desarrollada por EleutherAI (referencia a https://www.eleuther.ai/). EleutherAI es un conjunto de investigadores cuyo propósito es hacer accesibles los beneficios de la IA a todo el mundo. EleutherAI fue fundada en Julio de 2020. GPT-J no es su único proyecto, existen otros como GPT-Neo, aunque este tiene una menor potencia.
+Ante la privatización de GPT-3 han ido surgiendo alternativas de código abierto. Una de las más potentes hasta el momento es GPT-J, desarrollada por EleutherAI \footnote{https://www.eleuther.ai}. EleutherAI es un conjunto de investigadores cuyo propósito es hacer accesibles los beneficios de la IA a todo el mundo. EleutherAI fue fundada en Julio de 2020. GPT-J no es su único proyecto, existen otros como GPT-Neo, aunque este tiene una menor potencia.
 
 GPT-J es un modelo de aprendizaje con unos 6 billones de parámetros, y tal y cómo se indica en su página de información (referencia a https://gpt3demo.com/apps/gpt-j-6b) sería un modelo con una potencia cercana a el modelo Curie de GPT-3, que tiene 6.7 billones de parámetros.
 
-GPT-J al igual que GPT-3 ha sido entrenado con un gran conjunto de datos, en el caso de GPT-J se ha usado el conjunto de datos "The Pile" (referencia a articulo The Pile). Este conjunto de datos también ha sido desarrollado por EleutherAI, teniendo un tamaño de 825GB. El dataset dispone de un repositorio en Github (Enlace a https://github.com/EleutherAI/the-pile).
+GPT-J al igual que GPT-3 ha sido entrenado con un gran conjunto de datos, en el caso de GPT-J se ha usado el conjunto de datos "The Pile" \footnote{Referencia a articulo The Pile}. Este conjunto de datos también ha sido desarrollado por EleutherAI, teniendo un tamaño de 825GB. El dataset dispone de un repositorio en Github \footnote{https://github.com/EleutherAI/the-pile}.
 
 
 
@@ -417,7 +418,7 @@ GPT-J al igual que GPT-3 ha sido entrenado con un gran conjunto de datos, en el 
 
 \subsubsection*{Uso}
 
-Al igual que con GPT-3, con GPT-J se hace uso de inferencias al modelo para obtener las respuestas del chatbot. El código del backend está escrito en Python. Como código base se dispone de un notebook de Python (Enlace a https://colab.research.google.com/github/kingoflolz/mesh-transformer-jax/blob/master/colab_demo.ipynb#scrollTo=A-eT7Sw6if4J), donde se puede ver como se usa GPT-J. Dentro de este notebook se hace uso del contenido de un repositorio de Github (Enlace a https://github.com/kingoflolz/mesh-transformer-jax) donde están todos los elementos para usar el modelo, así como para realizar un fine-tuning del mismo, ya que al igual que pasa con GPT-3, se puede realizar un pequeño entrenamiento durante unas cuántas épocas para enfocar el modelo de GPT-J a el dominio del chatbot.
+Al igual que con GPT-3, con GPT-J se hace uso de inferencias al modelo para obtener las respuestas del chatbot. El código del backend está escrito en Python. Como código base se dispone de un notebook de Python (Enlace a https://colab.research.google.com/github/kingoflolz/mesh-transformer-jax/blob/master/colab\_demo.ipynb\#scrollTo=A-eT7Sw6if4J), donde se puede ver como se usa GPT-J. Dentro de este notebook se hace uso del contenido de un repositorio de Github (Enlace a https://github.com/kingoflolz/mesh-transformer-jax) donde están todos los elementos para usar el modelo, así como para realizar un fine-tuning del mismo, ya que al igual que pasa con GPT-3, se puede realizar un pequeño entrenamiento durante unas cuántas épocas para enfocar el modelo de GPT-J a el dominio del chatbot.
 
 Al igual que pasa con GPT-3, es necesario mantener el contexto para que el modelo pueda inferir la conversación de forma correcta, y la posible solución puede ser la misma que se planteó para GPT-3, es decir, usar una BBDD con PostgreSQL.
 
@@ -457,7 +458,7 @@ A la hora de integrar el chatbot encontramos el mismo problema que con GPT-3, y 
 Algunos ejemplos de chatbot implementados con GPT-J son los siguientes:
 
 \begin{itemize}
-    \item \textbf{Chatbot para hablar con Kanye West}. (Referencia a https://talktokanye.com/)
+    \item \textbf{Chatbot para hablar con Kanye West} \footnote{https://talktokanye.com}
 \end{itemize}
 
 
@@ -470,32 +471,69 @@ Algunos ejemplos de chatbot implementados con GPT-J son los siguientes:
 
 \section{Comparativa}
 
+
+Después de revisar una serie de plataformas es hora de compararlas para facilitar la elección de una ellas para el desarrollo del proyecto. En primer lugar se hará una comparación de pros y contras de todas las plataformas (Tabla \ref{tab:pros_contras_plataformas}), y seguidamente se mostrará una tabla (Tabla \ref{tab:carac_plataformas}) con una serie de características, indicando cuáles están presentes en las distintas plataformas.
+
+
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|l|}
-\hline
-\multicolumn{1}{|l|}{} &
-  \multicolumn{1}{c|}{\textbf{PROS}} &
-  \multicolumn{1}{c|}{\textbf{CONTRAS}} \\ \hline
-\textbf{AIML} &
+\begin{tabular}{c|l|l|}
+\cline{2-3}
+\multicolumn{1}{l|}{} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}\textbf{PROS}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFC9E}\textbf{CONTRAS}} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{AIML}} &
   \begin{tabular}[c]{@{}l@{}}- Multilenguaje\\ - El chatbot no es un caja negra\\ - Lenguaje de programación simple\\ - Posibilidad de conexión con APIs propias\\ - Muchas funcionalidades de forma gratuita\end{tabular} &
-  \begin{tabular}[c]{@{}l@{}}- Alto gasto de tiempo en la creación del agente conversacional\\ - Necesidad de una cuenta de pago usando servicios web\\ - No es una plataforma en la nube\end{tabular} \\ \hline
-\textbf{IBM Watson} &
+  \begin{tabular}[c]{@{}l@{}}- Alto gasto de tiempo en la creación del agente conversacional\\ - Necesidad de una cuenta de pago usando servicios web\\ - No es una plataforma en la nube\\ - Conversaciones poco naturales y poco flexibles\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{IBM Watson}} &
   \begin{tabular}[c]{@{}l@{}}- Posibilidad de crear chatbots muy complejos\\ - Gran cantidad de conexiones con APIs de mucha calidad\\ - Editor de arratrar y soltar\\ - Facilidad de desplegar el chatbot en muchos canales importantes\\ - Es una plataforma en la nube\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}- Necesidad de una cuenta de pago para crear chatbot complejos\\ - Enfocado para el mundo empresarial\\ - El chatbot es una caja negra\end{tabular} \\ \hline
-\textbf{Dialogflow} &
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{Dialogflow}} &
   \begin{tabular}[c]{@{}l@{}}- Posibilidad de crear chatbots muy complejos sin necesidad de pago\\ - Posibilidad de conexión con un servidor web de forma gratuita\\ - Facilidad de desplegar el chatbot en muchos canales importantes\\ - Creación de chatbots usando sólo frases y entidades\\ - Es una plataforma en la nube\end{tabular} &
-  \begin{tabular}[c]{@{}l@{}}- Para hacer agentes muy complejos es necesario gastar tiempo en la creación del servidor\\ - Se necesita tener cierto conocimiento de la plataforma para sacar todo su potencial\\ - Calidad regular en la documentación\\ - Parte del chatbot es una caja negra\end{tabular} \\ \hline
-\textbf{Rasa Stack} &
+  \begin{tabular}[c]{@{}l@{}}- Para hacer agentes muy complejos es necesario gastar tiempo \\ en la creación del servidor\\ - Se necesita tener cierto conocimiento de la plataforma para \\ sacar todo su potencial\\ - Calidad regular en la documentación\\ - Parte del chatbot es una caja negra\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{Rasa Stack}} &
   \begin{tabular}[c]{@{}l@{}}- Documentación de calidad\\ - El chatbot no es un caja negra\\ - Facilidad de desplegar el chatbot en muchos canales importantes\\ - Posibilidad de crear chatbots muy complejos\end{tabular} &
   \begin{tabular}[c]{@{}l@{}}- Necesidad de alto nivel técnico\\ - Plataforma en desarrollo\\ - Necesidad de mucho tiempo para la creación del chatbot\\ - No es una plataforma en la nube\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{GPT-3}} &
+  \begin{tabular}[c]{@{}l@{}}- Posibilidad de crear chatbots muy complejos\\ - Chatbots con una conversación muy natural\\ - Necesidad de pago para hacer uso de los servicios\\ - Buena documentación\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}- Necesidad de conocimientos técnicos\\ - Necesidad de una solución para mantener el contexto\\ - Requiere de un conjunto de datos para poder adaptar el \\ chatbot a su dominio\\ - Requiere de una plataforma a parte para el despliegue\end{tabular} \\ \hline
+\multicolumn{1}{|c|}{\cellcolor[HTML]{FFCCC9}\textbf{GPT-J}} &
+  \begin{tabular}[c]{@{}l@{}}- Posibilidad de crear chatbots muy complejos\\ - Chatbots con una conversación muy natural\\ - Código abierto\\ - Buena documentación\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}- Necesidad de conocimientos técnicos\\ - Necesidad de una solución para mantener el contexto\\ - Requiere de un conjunto de datos para poder adaptar el \\ chatbot a su dominio\\ - Requiere de una plataforma a parte para el despliegue\end{tabular} \\ \hline
 \end{tabular}%
 }
-\caption{Comparativa de las plataformas de desarrollo}
-\label{tab:my-table}
+\caption{Comparativa de pros y contras de las plataformas de desarrollo}
+\label{tab:pros_contras_plataformas}
 \end{table}
 
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+\rowcolor[HTML]{FFFC9E} 
+\textbf{Nombre} &
+  \textbf{Código abierto} &
+  \textbf{Multilenguaje} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Necesidad \\ Conocimientos técnicos\end{tabular}} &
+  \textbf{Cloud Service} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Elaboración de\\ Chatbot complejos\\ con facilidad\end{tabular}} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Conversación con\\ naturalidad\end{tabular}} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Documentación \\ de gran\\  calidad\end{tabular}} &
+  \textbf{\begin{tabular}[c]{@{}c@{}}Facilidad para\\ despliegue del \\ chatbot\end{tabular}} \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{AIML}       & \cmark & \cmark & \cmark & \xmark & \xmark & \xmark & \cmark & \xmark \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{IBM Watson} & \xmark & \cmark & \xmark & \cmark & \cmark & \cmark & \cmark & \cmark \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{Dialogflow} & \xmark & \cmark & \xmark & \cmark & \cmark & \cmark & \xmark & \cmark \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{Rasa Stack} & \cmark & \xmark & \cmark & \xmark & \xmark & \cmark & \cmark & \cmark \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{GPT-3}      & \xmark & \cmark & \cmark & \cmark & \cmark & \cmark & \cmark & \xmark \\ \hline
+\cellcolor[HTML]{FFCCC9}\textbf{GPT-J}      & \cmark & \cmark & \cmark & \xmark & \xmark & \cmark & \cmark & \xmark \\ \hline
+\end{tabular}%
+}
+\caption{Comparativa de características de las plataformas de desarrollo}
+\label{tab:carac_plataformas}
+\end{table}
 
 
 \section{Tecnología elegida}
@@ -505,3 +543,61 @@ La plataforma que he escogido entre las descritas es Dialogflow.
 He escogido esta plataforma por que con su edición de prueba gratuita se puede desarrollar sin problemas una demo de un agente conversacional. Esta plataforma me permitirá crear mi chatbot, que tendrá una complejidad media por lo que será posible crearlo en esta plataforma, y además el despligue del mismo será muy sencillo debido al gran abanico de posibilidades que nos proporciona Dialogflow.
 
 Pero no sólo voy a usar Dialogflow, sino que como ya se indicó en la subsección \ref{subsec:dialogflow} el agente de Dialogflow se puede conectar a un webhook. Yo crearé mi propio webhook en un servidor local. A este servidor local conectaré tanto un intérprete de AIML para posibilitar el aumento de complejidad del chatbot, y una BBDD donde se podrá guardar información útil para el chatbot. El servidor local estará creado mediante Node JS y Express, y usando ngrok se pondrá como público el servidor local.
+
+
+\section{Arquitectura Modelo-Vista-Controlador}
+
+Para el cumplimiento del requisito de la escalabilidad del chatbot, un paso a seguir es conseguir un bajo acoplamiento entre las partes del sistema. Teniendo en cuenta el sistema que se va a desarrollar, un patrón de diseño de arquitectura que se ajusta muy bien a él es la arquitectura Modelo-Vista-Controlador (MVC). Esta arquitectura se compone de las siguientes elementos:
+
+\begin{itemize}
+    \item Modelo
+    \item Vista
+    \item Controlador
+\end{itemize}
+
+Teniendo cada una de estas partes una funcionalidad clara y en gran medida independiente del resto. 
+
+Las principales ventajas de esta arquitectura son las siguientes:
+
+\begin{itemize}
+    \item Permite la programación paralela e independiente de cada una de las partes de la arquitectura
+    \item Independencia en el funcionamiento de las partes
+    \item Facilita la gestión de errores al ser tan modular el sistema, dado que los errores estarán más aislados y se podrán abordar de forma más eficiente, y por supuesto también porque se pueden sustituir esos módulos con errores por otros en buen estado.
+    \item Facilita la escalabilidad del sistema al poder conectar nuevos módulos de cada una de las partes de la arquitectura, sin tener que modificar el resto de partes
+    \item Permite una importante separación entre los datos y su representación visual
+\end{itemize}
+
+Pero todas estas ventajas tienen un coste que hay que asumir, y este coste es principalmente un aumento de complejidad en todos los ámbitos, por un lado provoca un aumento de la cantidad de código necesaria, este aumento de código implica tener un mayor número de archivos que mantener, y por último dificulta la curva de aprendizaje del sistema.
+
+A continuación se mostrará una breve definición de cada una de estas partes, basándome en un artículo de revista sobre la arquitectura (referencia a Capítulo II. Arquitectura del Software).
+
+\subsection*{Vista}
+
+La Vista es el objeto que maneja la presentación visual de los datos representados por el Modelo, es decir, es la capa sobre la que se muestran los resultados esperados por el usuario y con la que realiza la interacción el usuario.
+
+\subsection*{Controlador}
+
+El Controlador es el objeto que proporciona significado a las órdenes del usuario, actuando sobre los datos representados por el Modelo, centra toda la interacción entre la Vista y el Modelo, es decir, es la capa encarga de centralizar todas las conexiones entre el resto de capas, manejando las entradas, transfiriendo las al modelo de forma correcta y devolviendo la respuesta del Modelo a la Vista. Además es el encargado de modificar el Modelo en caso de que sea necesario.
+
+\subsection*{Modelo}
+
+El Modelo es el objeto que representa la información del programa. Maneja los datos y controla todas sus transformaciones, es decir, contiene y maneja toda la información del sistema salvo el conocimiento específico del Controlador ó de la Vista.
+
+\subsection{Ciclo de vida de MVC}
+
+Las conexiones entre las distintas partes están muy bien definidas y acotadas para tener un bajo acoplamiento.
+
+El Controlador recibe las entradas del usuario, el Controlador transmite la peticiones al Modelo, el cuál realiza las tareas de la petición y devuelve el resultado al Controlador, y este a su vez devuelve la respuesta a la Vista para que el usuario pueda observar los resultados de su entrada.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{imagenes/04_Analisis/ciclo_vida_MVC.jpg}
+    \begin{center}
+        (Fuente: \url{https://codigofacilito.com/articulos/mvc-model-view-controller-explicado})
+    \end{center}
+    \caption{Ciclo de vida de MVC}
+\end{figure}
+
+\subsection{Adaptación del proyecto a la arquitectura}
+
+
