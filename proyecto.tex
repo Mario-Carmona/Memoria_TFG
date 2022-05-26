@@ -3,6 +3,7 @@
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
 
 % \usepackage[style=list, number=none]{glossary} %
 %\usepackage{titlesec}
@@ -14,6 +15,7 @@
 \makeatletter
 \addto\shorthandsspanish{\let\esperiod\es@period@code}
 \makeatother
+
 
 
 %\usepackage[chapter]{algorithm}
@@ -29,6 +31,13 @@
 \usepackage[pdfborder={000}]{hyperref} %referencia
 
 \usepackage{natbib} % Paquete para la gestión de la bibliografía
+
+\usepackage{pdflscape}
+
+\usepackage{multirow}
+\usepackage{rotating}
+
+\usepackage{glossaries}
 
 % ********************************************************************
 % Re-usable information
@@ -180,6 +189,9 @@ pdfproducer = {pdflatex}
 \makeatother
 
 \usepackage{pdfpages}
+
+\input{glosario/entradas_glosario}
+
 \begin{document}
 \input{portada/portada}
 \input{prefacios/prefacio}
@@ -193,21 +205,24 @@ pdfproducer = {pdflatex}
 
 \input{capitulos/01_Introduccion}
 
-\input{capitulos/02_IngenieriaSoftware}
+\input{capitulos/02_EstadoDelArte}
 
-\input{capitulos/03_Planificacion}
+\input{capitulos/03_Análisis}
 
-\input{capitulos/04_Analisis}
+\input{capitulos/04_Planificacion}
 
-\input{capitulos/05_Diseno}
+\input{capitulos/05_Gestion}
 
-\input{capitulos/06_Implementacion}
+\input{capitulos/06_Diseno}
 
-\input{capitulos/07_Pruebas}
+\input{capitulos/07_Implementacion}
 
-\input{capitulos/08_Conclusiones_y_trabajosFuturos}
+\input{capitulos/08_Pruebas}
 
-\input{capitulos/09_Bibliografia}
+\input{capitulos/09_Conclusiones_y_trabajosFuturos}
+
+\input{capitulos/10_Bibliografia}
+
 %
 %%\chapter{Conclusiones y Trabajos Futuros}
 %
@@ -215,12 +230,12 @@ pdfproducer = {pdflatex}
 
 
 %
-%\appendix
+\appendix
 %\input{apendices/manual_usuario/manual_usuario}
 %%\input{apendices/paper/paper}
-%\input{glosario/entradas_glosario}
-% \addcontentsline{toc}{chapter}{Glosario}
-% \printglossary
+
+\addcontentsline{toc}{chapter}{Glosario}
+\printglossary
 \chapter*{}
 \thispagestyle{empty}
 

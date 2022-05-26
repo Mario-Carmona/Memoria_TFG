@@ -1,0 +1,213 @@
+
+Para implementar el servidor del controlador haré uso de la plataforma Heroku. El código fuente estará localizado en la carpeta app del repositorio que contiene toda la funcionalidad del chatbot.
+
+El backend del servidor será implementado con Python y Flask. Dentro del directorio app, nos encontramos con el script Python main.py, que contiene toda la lógica del servidor web. Adicionalmente se dispone de dos carpetas, la carpeta templates que contendrá los archivos que contienen el contenido estático y dinámico de la web, y la carpeta static que contendrá las imágenes, los archivos CSS y los archivos Javascript.
+
+Para desplegar el servidor web en Heroku se dispone de varias alternativas:
+
+\begin{itemize}
+    \item Procfile
+    \item Vincular con Github
+    \item Container Registry
+\end{itemize}
+
+→ https://devcenter.heroku.com/articles/build-docker-images-heroku-yml
+→ https://www.youtube.com/watch?v=eN1EG4-V3Yg
+
+En mi caso me he decantado por la alternativa del Container Registry. Dentro de esta alternativa se pueden tomar dos direcciones, construir la imagen y desplegarla en Heroku, ó desplegar el código en Heroku y construir la imagen dentro de Heroku. En mi caso he seguido la segunda opción.
+
+Para construir la imagen he usado Docker, por lo que se será necesario añadir un Dockerfile que define como se va a construir la imagen, y además un archivo .dockerignore para ignorar ciertos archivos durante la construcción de la imagen.
+
+Con los archivos indicados anteriormente ya podríamos construir la imagen. Ahora nos hace falta el archivo de configuración de Heroku, con el que se define como se va a construir la imagen dentro de Heroku. En concreto este archivo se suele nombre como heroku.yml .
+
+Ya disponemos de todo lo necesario para desplegar el servidor en Heroku, sólo haría falta seguir los siguientes comandos:
+
+
+\begin{lstlisting}
+git add *
+git commit -m "Ready for deploy"
+git push heroku main
+\end{lstlisting}
+
+
+Esta sería la opción oficial, pero en mi caso he optado por otra alternativa, que no es oficial y que es de código abiero, y consiste en realizar el despliegue mediante los actions del repositorio de Github. De esta forma puedo automatizar el despliegue del servidor cada vez que se hace un push del repositorio.
+
+→ https://github.com/AkhileshNS/heroku-deploy
+→ https://www.youtube.com/watch?v=hZoy_MOuj10
+
+Simplemente habrá que crear un nuevo archivo YML, donde se definirán los Jobs que realizará el Workflow. Uno de los pasos del Job para el despliegue del servidor será la acción que se nos proporciona en el repositorio (https://github.com/AkhileshNS/heroku-deploy). Será necesario pasar cierta información a esta acción para que puede realizar el despliegue de la imagen en heroku de forma automática. Este Workflow se ejecutará cada vez que se realice un push en el repositorio.
+
+
+Además de automatizar el despliegue del servidor, se automatiza la construcción de la imagen y su despliegue en DockerHub para que esté disponible para montar el servidor en cualquier máquina. 
+
+
+Llegados a este punto tendríamos un servidor totalmente funcional y disponible en todo momento, aunque esto último no es del todo cierto, dado que con la cuenta gratuita de Heroku tras un periodo de inactividad mayor de 30 minutos se procederá a la suspensión del servidor y los dynos pasarán a estar dormidos. Para solucionar este inconveniente realizaré peticiones programadas para que el servidor nunca esté en inactividad tanto tiempo, ya que sino un usuario podría encontrarse con el problema de tener que esperar a que se reinicie el servidor. Para realizar la peticiones se hace uso de Cron Job. Dentro de esta página se programa un trabajo que realizar peticiones al apartado wakeup del servidor web. Estas peticiones de realizan todos los días desde las 9 de la mañana hasta las  de la mañana cada 15 minutos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Instalación Docker} \label{sec:install_docker}
+
+Para poder construir la imagen Docker del controlador será necesario tener instalado docker en la máquina local para ello deberemos en primer lugar crear una cuenta en Docker Hub \footnote{\url{https://hub.docker.com/}}. Una vez tengamos una cuenta en Docker Hub deberemos ejecutar la serie de comandos que se indican en la guía de Digital Ocean \footnote{\url{https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04}}:
+
+\begin{lstlisting}
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+sudo systemctl status docker
+\end{lstlisting}
+
+
+\section{Instalación Heroku CLI} \label{sec:install_heroku_CLI}
+
+Para instalar Heroku CLI en Ubuntu sólo es necesario ejecutar el siguiente comando:
+
+\begin{lstlisting}
+sudo snap install --classic heroku
+\end{lstlisting}
+
+
+
+\section{Implementación del servidor}
+
+
+→ https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04-es
+
+
+El archivo principal del servidor es el \_\_init\_\_.py . Las distintas vistas del servidor estarán implementadas en el archivo views.py . Además tendremos dos carpetas, la carpeta templates contendrá los archivos que contienen el contenido estático y dinámico de la web; la carpeta static contendrá las imágenes, lso archivos CSS y los archivos Javascript.
+
+
+\section{Crear imagen del servidor}
+
+Suponiendo que se ha instalado Docker en la máquina local siguiendo los pasos se la sección \ref{sec:install_docker}, procedemos a crear el archivo que define a la imagen, es decir, el Dockerfile.
+
+Se coge como base una imagen de python, indicar por que se ha elegido esa 
+
+→ https://pythonspeed.com/articles/base-image-python-docker-images/
+→ https://pythonmania.medium.com/la-mejor-imagen-de-docker-para-tu-proyecto-python-e052b010fbca
+
+Por último ejecutando el siguiente comando se construirá la imagen en base al Dockerfile.
+
+\begin{lstlisting}
+sudo docker build -t macarse/sara-chatbot .
+\end{lstlisting}
+
+Para ejecutar el docker ejecutar el siguiente comando:
+
+\begin{lstlisting}
+sudo docker run -it macarse/sara-chatbot
+\end{lstlisting}
+
+
+
+\section{Configurar Github Workflow}
+
+\subsection{Configurar Docker CI}
+
+Para automatizar todo el proceso relacionado con la construcción y la publicación de las imágenes del servidor se hará uso de los workflows de Github.
+
+Los pasos a seguir por la automatización son los siguientes:
+
+\begin{itemize}
+    \item Logearnos en DockerHub
+    \item Construir la imagen
+    \item Subir la imagen creada en DockerHub
+\end{itemize}
+
+Para el primer paso suponemos que ya tenemos una cuenta en DockerHub, por lo que disponemos de un usuario y una contraseña, para mantener una cierta seguridad introduciremos estos datos como variables de enterno en los Actions secrets de Github. Para añadir una variable de entorno es tan simple como ir al apartado Settings del repositorio en cuestión y al subapartado Actions secrets y añadir las variables de entorno correspondientes. Realizaremos el registro antes de realizar la instalación. Una vez logeados procedemos a contruir la imagen y finalmente subimos la imagen a DockerHub. Toda esta configuración estará guarda en el archivo docker-image.yml .
+
+
+\subsection{Configurar Heroku CD}
+
+Suponiendo que tenemos Heroku CLI \ref{sec:install_heroku_CLI} instalado en la máquina local. Para automatizar todo el proceso relacionado con el despliegue de las imágenes del servidor en Heroku se hará uso de los workflows de Github.
+
+Los pasos a seguir por la automatización son los siguientes:
+
+\begin{itemize}
+    \item Logearnos en el registry de Heroku
+    \item Construir la imagen
+    \item Subir la imagen creada en DockerHub
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+→ https://medium.com/@javierfernandes/continuous-deployment-con-docker-travis-heroku-c24042fb830b

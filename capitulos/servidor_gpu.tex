@@ -1,0 +1,116 @@
+El servidor GPU está montado en Paperspace.
+
+Se debe crear un proyecto, y dentro de este proyecto se crean notebooks.
+
+Al crear los notebooks se debe elegir una plantilla, en mi caso al usar modelos de Huggingface, eligo la plantilla de Transformers + Huggingface.
+
+Una vez se ha creado el notebook si se ejecuta el notebook dará un error de falta del archivo libcudart.so.11.0, dado que no está instalado CUDA.
+
+Para instalar CUDA se han de seguir los siguientes pasos: → (https://medium.com/analytics-vidhya/install-cuda-11-2-cudnn-8-1-0-and-python-3-9-on-rtx3090-for-deep-learning-fcf96c95f7a1)
+
+\begin{itemize}
+    \item Comprobar la GPU que se está usando.
+    
+    Ejecutando el siguiente comando:
+    
+    \begin{lstlisting}
+    nvidia-smi
+    \end{lstlisting} 
+    
+    se observará la GPU asignada, la versión de los drivers instalada en la esquina superior izquierda, y la versión de CUDA que utiliza la GPU en la esquina superior derecha.
+    
+    Si al ejecutar el comando no aparece nada quiere decir que no están instalados los drivers de la GPU.
+    
+    \item (Opcional) Instalar los drivers
+    
+    Primero borramos cualquier drivers existente con el siguiente comando:
+    
+    \begin{lstlisting}
+    sudo apt-get purge nvidia*
+    \end{lstlisting} 
+    
+    Luego añadimos el repositorio donde obtener las librerías de los drivers, con el siguiente comando:
+    
+    \begin{lstlisting}
+    sudo add-apt-repository ppa:graphics-drivers/ppa
+    sudo apt-get update
+    \end{lstlisting}
+    
+    Observamos los drivers disponibles para la GPU con el siguiente comando:
+    
+    \begin{lstlisting}
+    ubuntu-drivers devices
+    \end{lstlisting}
+    
+    Procedemos a instalar uno de los drivers.
+    
+    Se puede instalar automáticamente con el siguiente comando:
+    
+    \begin{lstlisting}
+    ubuntu-drivers autoinstall
+    \end{lstlisting}
+    
+    O se puede instalar un versión en concreto con el siguiente comando:
+    
+    \begin{lstlisting}
+    sudo apt-get install <nombre de la versión>
+    \end{lstlisting}
+    
+    \item Instalar CUDA 11.2
+    
+    \begin{itemize}
+        \item Ejecutar script para instalar CUDA 11.2
+        
+        Se debe deseleccionar el instalar los drivers, y empezar a instalarlo
+        
+        \item Añadir variables de entorno
+        
+        Una vez instalado tal y como se indica en la salida del script anterior se deben añadir las siguientes variables de entorno al archivo ~/.bashrc .
+        
+        \begin{lstlisting}
+        export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}
+        export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+        export CUDA_HOME=/usr/local/cuda
+        \end{lstlisting}
+    \end{itemize}
+    
+    \item Instalar cuDNN 8.1.0
+    
+    El archivo comprimido se debe descargar de la página https://developer.nvidia.com/rdp/cudnn-archive.
+    
+    Una vez descargado y subido al servidor se debe descomprimir con el siguiente comando:
+    
+    \begin{lstlisting}
+    tar -zvxf cudnn-11.2-linux-x64-v8.1.0.77.tgz
+    \end{lstlisting}
+    
+    Al descomprimir el archivo obtenemos una carpeta con los include y la librerías de CUDA. Para que el sistema sepa donde se encuentra se añade la siguiente variable de entorno al archivo ~/.bashrc .
+    
+    \begin{lstlisting}
+    export LD_LIBRARY_PATH=xxx/cuda/lib64:$LD_LIBRARY_PATH
+    \end{lstlisting}
+    
+    Ejecutamos el archivo ~/.bashrc con el siguiente comando:
+    
+    \begin{lstlisting}
+    source .bashrc
+    \end{lstlisting}
+    
+    para activar todas las variables de entorno creadas.
+    
+    Damos permisos de lectura y escritura al archivo cudnn.h con el siguiente comando:
+    
+    \begin{lstlisting}
+    sudo chmod a+r /usr/local/cuda/include/cudnn.h
+    \end{lstlisting}
+    
+    \item Comprobar la instalación de CUDA
+    
+    Para comprobar que se ha instalado correctamente CUDA se utiliza el siguiente comando:
+    
+    \begin{lstlisting}
+    nvcc -V
+    \end{lstlisting}
+    
+    El cuál debe devolver una serie de información como la versión de CUDA instalada. Si no devuelve nada quiere decir que no se ha instalado correctamente.
+\end{itemize}
