@@ -45,6 +45,11 @@
 
 \usepackage{booktabs}
 
+\usepackage{subfig}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
 % ********************************************************************
 % Re-usable information
 % ********************************************************************
@@ -227,21 +232,26 @@ pdfproducer = {pdflatex}
 
 \input{capitulos/09_Conclusiones_y_trabajosFuturos}
 
-\input{capitulos/10_Bibliografia}
-
 %
-%%\chapter{Conclusiones y Trabajos Futuros}
 %
 %
 
 
 %
 \appendix
+
+\input{apendices/detalle_implementacion}
+
+\input{apendices/manual_usuario}
+
 %\input{apendices/manual_usuario/manual_usuario}
 %%\input{apendices/paper/paper}
 
 \addcontentsline{toc}{chapter}{Glosario}
 \printglossary
+
+\input{capitulos/10_Bibliografia}
+
 \chapter*{}
 \thispagestyle{empty}
 

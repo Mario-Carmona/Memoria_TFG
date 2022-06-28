@@ -31,7 +31,7 @@ Los recursos materiales utilizados para el desarrollo del proyecto han sido muy 
 
 \begin{itemize}
 \item \textbf{Portátil Personal}: Lenovo Legion Y520 con un procesador Intel Core i7-7700HQ, una arquitectura de 64 bits, y una memoria RAM de 16 GB. Con este recurso se elabora toda la programación y la documentación del proyecto.
-\item \textbf{Servidores GPU de la UGR}: Estos servidores están compuestos por una serie de nodos de cómputo unidos a un nodo cabecera, sobre el cual se hacen las peticiones. Estas peticiones son gestionadas por un gestor de colas, en concreto el gestor es SLURM. Los nodos de cómputo se dividen en varias colas, con la cuenta que se me concedió al poco de iniciar el proyecto, únicamente puedo acceder a los nodos de cómputo situados en la cola \textit{dios}. Dentro de los servidores a cada usuario se le asigna un espacio de almacenamiento donde se puede guardar de forma permanente el código a ejecutar en los servidores.
+\item \textbf{\href{https://dasci.es/es/sobre-dasci/recursos/recursos-tecnologicos/}{Servidores GPU del Instituto DaSCI}}: Estos servidores están compuestos por una serie de nodos de cómputo unidos a un nodo cabecera, sobre el cual se hacen las peticiones. Estas peticiones son gestionadas por un gestor de colas, en concreto el gestor es SLURM. Los nodos de cómputo se dividen en varias colas, con la cuenta que se me concedió al poco de iniciar el proyecto, únicamente puedo acceder a los nodos de cómputo situados en la cola \textit{dios}. Dentro de los servidores a cada usuario se le asigna un espacio de almacenamiento donde se puede guardar de forma permanente el código a ejecutar en los servidores.
 \end{itemize}
 
 \subsection{Recursos software} \label{subsec:recur_software}
@@ -43,7 +43,7 @@ Los recursos software engloban a todas aquellas herramientas software utilizadas
 \item \textbf{GitHub}: Es la plataforma donde se alojará todo el código y la documentación del proyecto. Esta herramienta es una de las plataformas de software libre de alojamiento de código más empleadas a nivel mundial. Además, es usada como gestor de versiones para el proyecto.
 \item \textbf{Git}: Es un software de control de versiones. Es el software empleado por GitHub para el control de versiones de su plataforma.
 \item \textbf{Visual Studio Code}: Es un editor de código fuente. Con este editor se desarrolla todo el código del proyecto. Este editor es de software libre.
-\item \textbf{Heroku}: Es una plataforma que proporciona servicios de computación en la nube. Aunque no es en su totalidad un software libre. Para este proyecto he hecho uso de la versión gratuita de la plataforma. El inconveniente de esta versión gratuita es que no se puede utilizar el sistema en producción, solamente para hacer pruebas. Para tener una idea de los distintos planes que existen en Heroku, en la Figura \ref{fig:planes_app_heroku} se muestran todos los planes de pago, y adicionalmente en la Figura \ref{fig:planes_dynos_heroku} se muestran todos los niveles de dynos que existen en Heroku. Un dyno es un contenedor, ya que Heroku divide su potencia de cómputo en unidades, y esas unidades son los dynos. Adicionalmente, es interesante también poder visualizar los planes que existen para añadir una base de datos a la app alojada en Heroku, estos planes para la base de datos se pueden ver en la Figura \ref{fig:planes_postgres_heroku}.
+\item \textbf{Heroku}: Es una plataforma que proporciona servicios de computación en la nube. Aunque no es en su totalidad un software libre, para este proyecto he hecho uso de la versión gratuita de la plataforma. El inconveniente de esta versión gratuita es que no se puede utilizar el sistema en producción, solamente para hacer pruebas. Para tener una idea de los distintos planes que existen en Heroku, en la Figura \ref{fig:planes_app_heroku} se muestran todos los planes de pago, y adicionalmente en la Figura \ref{fig:planes_dynos_heroku} se muestran todos los niveles de dynos que existen en Heroku. Un dyno es un contenedor, ya que Heroku divide su potencia de cómputo en unidades, y esas unidades son los dynos. Adicionalmente, es interesante también poder visualizar los planes que existen para añadir una base de datos a la app alojada en Heroku, estos planes para la base de datos se pueden ver en la Figura \ref{fig:planes_postgres_heroku}.
 
 \begin{figure}[H]
 \centering
@@ -128,6 +128,8 @@ Además, dentro de cada día laborable hay una jornada laboral. Normalmente, est
 $Horas\ laborables\ =\ Dias\ laborables\ *\ 5\ horas/dia\ =\ 550\ horas$
 \end{center}
 
+Este número de horas excede en gran medida el número de horas correspondientes a los ECTS de un TFG. El número mínimo de horas que se debe emplear en el desarrollo de un TFG deben ser 300 horas.
+
 Una vez tenemos el tiempo trabajado por el ingeniero, es necesario obtener que salario tiene este trabajador a la hora. Para obtener esta información me he basado en el estudio de la página talent.com \footnote{\url{https://acortar.link/MiqarT}}. En este estudio se analiza el sueldo medio de un ingeniero informático en España, el salario medio es de 2.208 \EURtm al mes. Por lo tanto, el salario medio por hora será de 13,59 \EURtm.
 
 Con la información recabada ya podemos estimar el coste del trabajo realizado por el ingeniero. El coste total se puede ver en la Tabla \ref{tab:coste_recur_humanos}.
@@ -158,7 +160,7 @@ Para calcular el coste actual del recurso se debe obtener previamente la siguien
 \item Coeficiente de amortiguación lineal
 \end{itemize}
 
-Nos vamos a centrar en el portátil personal, ya que el coste de los servidores GPU de la UGR es nulo, y en el caso de usar servidores en la nube ajenos a la UGR, el coste de estos servidores suele tener un coste fijo cada mes a través de una cuota mensual o en ocasiones el coste de estos servidores se calcula según el tiempo de uso que se haya hecho de estos servidores.
+Nos vamos a centrar en el portátil personal, ya que a pesar de que los servidores GPU del Instituto DaSCI tienen un coste de uso, al ser estudiantes de la UGR el coste para nuestro proyecto ha sido nulo y de esta forma lo hemos indicado en el cálculo de los costes; y en el caso de usar servidores en la nube ajenos a la UGR, el coste de estos servidores suele tener un coste fijo cada mes a través de una cuota mensual o en ocasiones el coste de estos servidores se calcula según el tiempo de uso que se haya hecho de estos servidores.
 
 El coste de adquisición del producto es de 1100 \EURtm. Como coste residual fijamos la cantidad de 100 \EURtm. Y por último queda fijar el coeficiente de amortiguación lineal, para fijar este valor he recabado información sobre el coeficiente de amortiguación lineal de los equipos electrónicos. Esta información la encontré en un artículo de la página web Iberley \footnote{\url{https://www.iberley.es/temas/tablas-amortizacion-i-sociedades-30681}}, donde se indica que el coeficiente de amortiguación lineal máximo para estos equipos electrónicos es del 20\%.
 
@@ -245,7 +247,7 @@ Trabajo autónomo                     & 7474,50 \EURtm          \\* \midrule
 \textbf{Costes de recursos materiales}                      & \textbf{91,66 \EURtm} \\
                                      & \multicolumn{1}{l}{}                   \\
 Portátil personal                    & 91,66 \EURtm            \\
-Servidores GPU de la UGR             & 0,00 \EURtm             \\* \midrule
+Servidores GPU del Instituto DaSCI             & 0,00 \EURtm             \\* \midrule
 \textbf{Costes de recursos software} & \textbf{0,00 \EURtm}    \\
                                      & \multicolumn{1}{l}{}                   \\
 Sistema Operativo                    & 0,00 \EURtm             \\

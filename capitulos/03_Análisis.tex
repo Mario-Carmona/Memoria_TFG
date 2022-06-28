@@ -112,7 +112,7 @@ Basado en: \url{https://openwebinars.net/blog/que-es-un-sprint-scrum}
 
 Tomando como partida la metodología Scrum original, se ha realizado una adaptación a mi proyecto. La primera adaptación es la asignación de roles, donde una misma persona efectúa los roles de Scrum master y el equipo de desarrollo, a la vez, este equipo de desarrollo lo formará una única persona; y por último, el papel de Product owner lo realizará el tutor del proyecto. Otra consecuencia, derivada de la formación del equipo por una única persona, es que no se van a hacer reuniones diarias, dado que no hay que proceder a una supervisión del trabajo del equipo en conjunto. Aunque no se hagan reuniones diarias, se ha optado por efectuar autorreflexiones semanalmente para llevar un control del avance durante el sprint. Los sprints tendrán una duración variable dependiendo de la cantidad y el peso de las tareas efectuadas en cada sprint. Además de las propias autorreflexiones, se harán reuniones con el tutor cada dos semanas, aunque el contacto con el tutor es constante durante todo el sprint vía correo electrónico.
 
-\section{Historias de usuario}
+\section{Historias de usuario} \label{sec:historias_usuario}
 
 Dado que hemos elegido una metodología SCRUM las características y funcionalidades del sistema no van a estar definidas en función de una lista de requisitos, tal y como se hace en las metodologías tradicionales, indicando los requisitos funcionales, no funcionales y de información; sino que se van a definir por historias de usuario.
 
@@ -323,55 +323,71 @@ Tras realizar el análisis de riesgos se obtendrá una lista de riesgos, esta li
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|}
 \hline
-\rowcolor[HTML]{C0C0C0}
+\rowcolor[HTML]{C0C0C0} 
 \textbf{Identificador} &
-\multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Riesgo}} &
-\multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Causa}} &
-\multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Plan de actuación}} \\ \hline
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Riesgo}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Causa}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Plan de actuación}} \\ \hline
 R.1 &
-\begin{tabular}[c]{@{}l@{}}Falta de información para generar el dataset con el \\ que entrenar el chatbot\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Uso del chatbot en temas muy especializados y \\ poco discutidos en Internet\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Intentar usar el chatbot con temas frecuentes \\ en foros de Internet\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Falta de información para generar el dataset con el \\ que entrenar el chatbot\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Uso del chatbot en temas muy especializados y \\ poco discutidos en Internet\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Intentar usar el chatbot con temas frecuentes \\ en foros de Internet\end{tabular} \\ \hline
 R.2 &
-Pérdida del proyecto &
-\begin{tabular}[c]{@{}l@{}}Fallos en los equipos que contienen la \\ información del proyecto o pérdidas de los mismos\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Utilizar herramientas de backup para tener \\ siempre una copia de seguridad\end{tabular} \\ \hline
+  Pérdida del proyecto &
+  \begin{tabular}[c]{@{}l@{}}Fallos en los equipos que contienen la \\ información del proyecto o pérdidas de los mismos\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Utilizar herramientas de backup para tener \\ siempre una copia de seguridad\end{tabular} \\ \hline
 R.3 &
-\begin{tabular}[c]{@{}l@{}}Pérdida del listado de cambios realizados en el \\ proyecto\end{tabular} &
-Realizar el proyecto sin guardar versiones del mismo &
-\begin{tabular}[c]{@{}l@{}}Utilizar herramientas de control de versiones \\ como Github\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Pérdida del listado de cambios realizados en el \\ proyecto\end{tabular} &
+  Realizar el proyecto sin guardar versiones del mismo &
+  \begin{tabular}[c]{@{}l@{}}Utilizar herramientas de control de versiones \\ como Github\end{tabular} \\ \hline
 R.4 &
-Complejidad tecnológica &
-\begin{tabular}[c]{@{}l@{}}Desconocimiento de la tecnología base del \\ proyecto o inmadurez de la tecnología utilizada\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Realizar un análisis previo de las tecnologías \\ a utilizar en el proyecto para analizar su \\ viabilidad de uso en el proyecto\end{tabular} \\ \hline
+  Complejidad tecnológica &
+  \begin{tabular}[c]{@{}l@{}}Desconocimiento de la tecnología base del \\ proyecto o inmadurez de la tecnología utilizada\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Realizar una análisis previo de las tecnologías \\ a utilizar en el proyecto para analizar su \\ viabilidad de uso en el proyecto\end{tabular} \\ \hline
 R.5 &
-\begin{tabular}[c]{@{}l@{}}Solicitud de cambios continuamente por parte del \\ cliente\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Mala comunicación con el cliente o falta de \\ entendimiento entre ambas partes\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Realizar reuniones frecuentas para el análisis \\ del estado del proyecto y mantener un flujo de \\ feedback continuo con el cliente\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Solicitud de cambios continuos por parte del \\ cliente\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Mala comunicación con el cliente o falta de \\ entendimiento entre ambas partes\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Realizar reuniones frecuentas para el análisis \\ del estado del proyecto y mantener un flujo de \\ feedback continuo con el cliente\end{tabular} \\ \hline
 R.6 &
-\begin{tabular}[c]{@{}l@{}}Falta de conocimientos por parte del cliente sobre la \\ tecnología en que se basa el proyecto\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Uso de tecnologías muy técnicas y \\ especializadas, o de reciente aparición\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Analizar los conocimientos del cliente al inicio \\ del proyecto y tratar de explicar de una forma \\ sencilla las bases de las tecnologías utilizadas\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Falta de conocimientos por parte del cliente sobre la \\ tecnología en que se basa el proyecto\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Uso de tecnologías muy técnicas y \\ especializadas, o de reciente aparición\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Analizar los conocimientos del cliente al inicio \\ del proyecto y tratar de explicar de una forma \\ sencilla las bases de las tecnologías utilizadas\end{tabular} \\ \hline
 R.7 &
-Los objetivos del proyecto no son realistas &
-Sobreestimación del alcance del proyecto &
-\begin{tabular}[c]{@{}l@{}}Realizar una planificación coherente con el \\ tiempo y recursos disponibles\end{tabular} \\ \hline
+  Los objetivos del proyecto no son realistas &
+  Sobreestimación del alcance del proyecto &
+  \begin{tabular}[c]{@{}l@{}}Realizar una planificación coherente con el \\ tiempo y recursos disponibles\end{tabular} \\ \hline
 R.8 &
-Generación de las respuestas en un tiempo excesivo &
-Utilización de tecnologías lentas y poco eficientes &
-\begin{tabular}[c]{@{}l@{}}Realizar optimizaciones en la generación de \\ respuestas\end{tabular} \\ \hline
+  Generación de las respuestas en un tiempo excesivo &
+  Utilización de tecnologías lentas y poco eficientes &
+  \begin{tabular}[c]{@{}l@{}}Realizar optimizaciones en la generación de \\ respuestas\end{tabular} \\ \hline
 R.9 &
-\begin{tabular}[c]{@{}l@{}}Problemas puntuales con las herramientas de \\ comunicación\end{tabular} &
-Caídas del servicio de correo o de videollamada &
-\begin{tabular}[c]{@{}l@{}}Buscar herramientas alternativas a las \\ herramientas que están teniendo problemas \\ puntuales\end{tabular} \\ \hline
+  \begin{tabular}[c]{@{}l@{}}Problemas puntuales con las herramientas de \\ comunicación\end{tabular} &
+  Caídas del servicio de correo o de videollamada &
+  \begin{tabular}[c]{@{}l@{}}Buscar herramientas alternativas a las \\ herramientas que están teniendo problemas \\ puntuales\end{tabular} \\ \hline
 R.10 &
-Quejas sobre la interfaz del sistema &
-Implementación poco intuitiva de la interfaz &
-\begin{tabular}[c]{@{}l@{}}Evaluación de los prototipos de interfaz por \\ parte del cliente\end{tabular} \\ \hline
+  Quejas sobre la interfaz del sistema &
+  Implementación poco intuitiva de la interfaz &
+  \begin{tabular}[c]{@{}l@{}}Evaluación de los prototipos de interfaz por \\ parte del cliente\end{tabular} \\ \hline
 R.11 &
-Fugas de información sobre los usuarios &
-\begin{tabular}[c]{@{}l@{}}Mala gestión en la seguridad de los datos \\ gestionados por el sistema\end{tabular} &
-\begin{tabular}[c]{@{}l@{}}Intentar conservar la mínima cantidad de \\ información en el sistema, y aquella información \\ que se necesite conservar guardarla con la mayor \\ seguridad posible\end{tabular} \\ \hline
+  Fugas de información sobre los usuarios &
+  \begin{tabular}[c]{@{}l@{}}Mala gestión en la seguridad de los datos \\ gestionados por el sistema\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Intentar conservar la mínima cantidad de \\ información en el sistema, y aquella información \\ que se necesite conservar guardarla con la mayor \\ seguridad posible\end{tabular} \\ \hline
+R.12 &
+  Aparición de tareas imprevistas &
+  \begin{tabular}[c]{@{}l@{}}Planificación errónea basada en un mal análisis del\\ proyecto\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Replanificar las tareas y actualizar tanto el\\ backlog como los sprints a realizar\end{tabular} \\ \hline
+R.13 &
+  \begin{tabular}[c]{@{}l@{}}Los modelos no llegan a cumplir con las \\ expectativas\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Dificultad para entrenar los modelos en la tarea que\\ se tiene pensada en un principio\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Dedicar un mayor tiempo a la búsqueda de \\ información y a la labor de entrenamiento de los\\ modelos\end{tabular} \\ \hline
+R.14 &
+  \begin{tabular}[c]{@{}l@{}}Finalización de los periodos de prueba gratuitos de\\ ciertas herramientas\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Extensión del periodo de tiempo de uso de las\\ herramientas\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Realizar una buena planificación del inicio de los\\ periodos de prueba acorde al ritmo de trabajo del\\ proyecto\end{tabular} \\ \hline
+R.15 &
+  Deducción errónea de la edad del usuario &
+  \begin{tabular}[c]{@{}l@{}}Mala calidad de la imagen tomada por el usuario o\\ uso de un modelo poco preciso para la clasificación\\ de personas mediante la edad\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}Mostrar al usuario la imagen que va a enviar al\\ proceso de deducción, y buscar modelos probados\\ que tengan una fiabilidad y precisión aceptables\end{tabular} \\ \hline
 \end{tabular}%
 }
 \caption{Tabla de riesgos del proyecto}
@@ -391,11 +407,21 @@ Fugas de información sobre los usuarios &
   \cellcolor[HTML]{C0C0C0}\textbf{0,5} &
   \cellcolor[HTML]{C0C0C0}\textbf{0,7} &
   \cellcolor[HTML]{C0C0C0}\textbf{0,9} \\ \hline
-\textbf{Muy Bajo} &                          & \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{FCFF2F} \\ \hline
-\textbf{Bajo}     &                          & \cellcolor[HTML]{32CB00} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{F8A102} \\ \hline
-\textbf{Medio}    &                          & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{F8A102} \\ \hline
-\textbf{Alto}     & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{FE0000} \\ \hline
-\textbf{Muy Alto} & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{FE0000} & \cellcolor[HTML]{FE0000} \\ \hline
+\textbf{Muy Bajo} &     & \cellcolor[HTML]{32CB00}R.9 & \cellcolor[HTML]{32CB00}     & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{FCFF2F} \\ \hline
+\textbf{Bajo}     &     & \cellcolor[HTML]{32CB00}R.6 & \cellcolor[HTML]{FCFF2F}     & \cellcolor[HTML]{FCFF2F} & \cellcolor[HTML]{F8A102} \\ \hline
+\textbf{Medio}    & R.5 & \cellcolor[HTML]{FCFF2F}R.3 & \cellcolor[HTML]{FCFF2F}R.10 & \cellcolor[HTML]{F8A102} & \cellcolor[HTML]{F8A102} \\ \hline
+\textbf{Alto} &
+  \cellcolor[HTML]{FCFF2F}R.12 &
+  \cellcolor[HTML]{FCFF2F}\begin{tabular}[c]{@{}c@{}}R.4\\ R.14\\ R.15\end{tabular} &
+  \cellcolor[HTML]{F8A102}R.7 &
+  \cellcolor[HTML]{F8A102}\begin{tabular}[c]{@{}c@{}}R.1\\ R.13\end{tabular} &
+  \cellcolor[HTML]{FE0000} \\ \hline
+\textbf{Muy Alto} &
+  \cellcolor[HTML]{FCFF2F}R.2 &
+  \cellcolor[HTML]{F8A102} &
+  \cellcolor[HTML]{F8A102}\begin{tabular}[c]{@{}c@{}}R.8 \\ R.11\end{tabular} &
+  \cellcolor[HTML]{FE0000} &
+  \cellcolor[HTML]{FE0000} \\ \hline
 \end{tabular}%
 }
 \caption{Matriz probabilidad-impacto de riesgos}
@@ -406,7 +432,9 @@ Fugas de información sobre los usuarios &
 
 \section{Riesgos materializados}
 
+Durante el trascurso del proyecto no se han materializado riesgos en gran cantidad, aunque en la etapa final si se han materializado algunos de ellos. Los riesgos materializados se han centrado sobre todo en los modelos que generan las respuestas desde distintos puntos. Uno de los primeros riesgos que se manifestó fue el riesgo de generar las respuestas en un tiempo excesivo (R.8). A pesar de su materialización, aplicando el plan de actuación previsto se pudo solucionar rápidamente. Este plan de actuación consiste en emplear módulos de optimización para mejorar los tiempos de inferencia de estos módulos, en concreto, el módulo de optimización utilizado es DeepSpeed, del cuál se hablará en posteriores apartados del proyecto.
 
+Finalmente, se materializaron dos riesgos muy relacionados entre ellos. El riesgo que en principio origina al otro riesgo, es el riesgo de la falta de información para generar los datasets necesarios para entrenar a los modelos (R.1). Si que se han llegado a generar datasets, pero dada la dificultad y el alto gasto de tiempo necesario no se ha llegado a cumplir el objetivo del todo y por lo tanto se ha materializado en parte este riesgo. Esta materialización provoca la materialización del riesgo de no cumplir con las expectativas puestas en los modelos del chatbot. Puesto que no se llega a conseguir el dataset buscado, no se podrá tener el modelo buscado. Como adelanto a lo que se tratará en posteriores apartados, se buscaba que los modelos fuesen capaces de enfocar la conversación a un tono didáctico basándose en la información que le iba proporcionando el usuario durante la conversación, pero finalmente no se ha conseguido obtener esos modelo con un cierto enfoque didáctico. También el riesgo de no cumplir las expectativas que se tuvieran sobre los modelos conversacionales del chatbot llevan implícito el riesgo de haber impuesto unos objetivos poco realistas (R.7). Sin duda, puede que se hayan fijado objetivos difícilmente alcanzables en el tiempo disponible para el desarrollo de este proyecto, puesto que implementar un chatbot que sea capaz de realizar una función con cierto grado de complejidad no es una tarea sencilla y rápida, sobre todo no es rápida porque hay que hacer gran hincapié en lo costoso que es obtener información de calidad y que se encuentre en grandes cantidades.
 
 
 
