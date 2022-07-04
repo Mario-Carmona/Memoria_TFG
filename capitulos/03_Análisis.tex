@@ -237,26 +237,6 @@ Una vez definida la estructura de las historias de usuario procedemos a describi
 \label{tab:HU6}
 \end{table}
 
-\begin{table}[H]
-\centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|
->{\columncolor[HTML]{C0C0C0}}c |l|}
-\hline
-\textbf{Identificación} &
-  HU.7 - Conversación temática \\ \hline
-\textbf{Descripción} &
-  \begin{tabular}[c]{@{}l@{}}Como administrador del sistema quiero que el sistema \\ genere respuestas relacionadas con la temática del \\ chatbot para favorecer el aprendizaje por parte del \\ usuario sobre la temática.\end{tabular} \\ \hline
-\textbf{Aceptación} &
-  \begin{tabular}[c]{@{}l@{}}El sistema debe orientar las respuestas hacia el ámbito \\ temático del chatbot, sin importar que pregunta se \\ haya realizado.\end{tabular} \\ \hline
-\textbf{Tareas} &
-  \begin{tabular}[c]{@{}l@{}}• Implementar un sistema que sea capaz de orientar las\\ respuestas a la temática del chatbot.\\  • Implementar un sistema que genere respuestas sobre\\ la temática del chatbot, personalizándolas al usuario en \\ base a la información proporcionada por el mismo.\end{tabular} \\ \hline
-\end{tabular}%
-}
-\caption{Historia de Usuario - HU.7}
-\label{tab:HU7}
-\end{table}
-
 
 \subsection{Listado de las historias de usuario}
 
@@ -289,9 +269,6 @@ HU.5 (Tabla \ref{tab:HU5}) &
 HU.6 (Tabla \ref{tab:HU6}) &
 \begin{tabular}[c]{@{}l@{}}Como usuario quiero que las respuestas del sistema\\ tenga una coherencia con el resto de la conversación\\ realizada con anterioridad a la pregunta para que su \\ uso sea más agradable e interesante para el usuario.\end{tabular} &
 3 \\ \hline
-HU.7 (Tabla \ref{tab:HU7}) &
-\begin{tabular}[c]{@{}l@{}}Como administrador del sistema quiero que el sistema\\ genere respuestas relacionadas con la temática del chatbot\\ para favorecer el aprendizaje por parte del usuario sobre \\ la temática.\end{tabular} &
-2 \\ \hline
 \end{tabular}%
 }
 \caption{Listado de historias de usuario junto con su prioridad}
@@ -432,6 +409,8 @@ R.15 &
 
 Durante el trascurso del proyecto no se han materializado riesgos en gran cantidad, aunque en la etapa final si se han materializado algunos de ellos. Los riesgos materializados se han centrado sobre todo en los modelos que generan las respuestas desde distintos puntos. Uno de los primeros riesgos que se manifestó fue el riesgo de generar las respuestas en un tiempo excesivo (R.8). A pesar de su materialización, aplicando el plan de actuación previsto se pudo solucionar rápidamente. Este plan de actuación consiste en emplear módulos de optimización para mejorar los tiempos de inferencia de estos módulos, en concreto, el módulo de optimización utilizado es DeepSpeed, del cual se hablará en posteriores apartados del proyecto.
 
-Finalmente, se materializaron dos riesgos muy relacionados entre ellos. El riesgo que en principio origina al otro riesgo, es el riesgo de la falta de información para generar los conjuntos de datos necesarios para entrenar a los modelos (R.1). Sí que se han llegado a generar conjuntos de datos, pero dada la dificultad y el alto gasto de tiempo necesario no se ha llegado a cumplir el objetivo del todo y, por lo tanto, se ha materializado en parte este riesgo. Esta materialización provoca la materialización del riesgo de no cumplir con las expectativas puestas en los modelos del chatbot. Puesto que no se llega a conseguir el conjunto de datos buscado, no se podrá tener el modelo buscado. Como adelanto a lo que se tratará en posteriores apartados, se buscaba que los modelos fuesen capaces de enfocar la conversación a un tono didáctico basándose en la información que le iba proporcionando el usuario durante la conversación, pero finalmente no se ha conseguido obtener esos modelo con un cierto enfoque didáctico. También el riesgo de no cumplir las expectativas que se tuvieran sobre los modelos conversacionales del chatbot llevan implícito el riesgo de haber impuesto unos objetivos poco realistas (R.7). Sin duda, puede que se hayan fijado objetivos difícilmente alcanzables en el tiempo disponible para el desarrollo de este proyecto, puesto que implementar un chatbot que sea capaz de realizar una función con cierto grado de complejidad no es una tarea sencilla y rápida, sobre todo no es rápida porque hay que hacer gran hincapié en lo costoso que es obtener información de calidad y que se encuentre en grandes cantidades.
+Finalmente, se materializó el riesgo por la falta de información para generar los conjuntos de datos necesarios para entrenar a los modelos (R.1). Al igual que pasó con el anterior riesgo, se puso en marcha el plan de actuación, el cual consistía en recopilar información de foros para obtener nuestra propia información con la que entrenar a los modelos. La implementación de este plan de actuación se puede ver en el Apartado \ref{subsec:gen_conj_datos}. Con este plan de actuación se pudo obtener un conjunto de datos suficientemente grande como para entrenar de forma adecuada nuestros modelos.
+
+En definitiva, todos los riesgos que se pudieron materializar durante el proyecto pudieron ser solventados gracias a los planes de actuación que se desarrollaron durante la fase de análisis. Y el proyecto pudo llegar a cumplir todos sus objetivos previstos.
 
 
