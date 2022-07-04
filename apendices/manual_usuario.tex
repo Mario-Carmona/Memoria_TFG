@@ -1,1 +1,65 @@
 \chapter{Manual de usuario}
+
+\section{Instalación}
+
+Para ambas instalaciones se deberá crear un repositorio propio que contenga el código de nuestro repositorio en Github \footnote{\url{https://github.com/Mario-Carmona/SARA_Chatbot}}. 
+
+\subsection{Instalación del servidor de la Vista y el Controlador}
+
+Una vez tenemos el repositorio debemos clonar el repositorio en nuestra máquina. Suponiendo que hemos creado una app en nuestra cuenta de Heroku, deberemos actualizar la información de nuestro \href{https://github.com/Mario-Carmona/SARA_Chatbot/blob/main/.github/workflows/controller_CI_CD.yml}{Workflow para el servidor de la Vista y el Controlador} con la información de nuestra cuenta y nuestra app; como son el email de nuestra cuenta de Heroku, el nombre de la app y la key de la API de nuestra cuenta.
+
+Una vez tenemos actualizada la información del Workflow, al realizar un commit sobre el código de la carpeta app de nuestro nuevo repositorio, se realizará el despliegue de la app en la plataforma Heroku.
+
+\subsection{Instalación del servidor del Modelo}
+
+Esta instalación se realizará en una máquina distinta con GPU, suponiendo que la máquina utilizada para la primera instalación no dispone de GPU. La instalación consistirá en clonar el repositorio en esta máquina con GPU. Adicionalmente se deben descargar los modelos utilizados para todas las funcionalidades del Modelo. Los modelos usados son los siguientes:
+
+\begin{itemize}
+    \item \href{https://huggingface.co/facebook/blenderbot-400M-distill/tree/main}{facebook/blenderbot-400M-distill}
+    \item \href{https://huggingface.co/mrm8488/t5-base-finetuned-question-generation-ap/tree/main}{mrm8488/t5-base-finetuned-question-generation-ap}
+    \item \href{https://huggingface.co/google/pegasus-xsum/tree/main}{google/pegasus-xsum}
+    \item \href{https://huggingface.co/nateraw/vit-age-classifier/tree/main}{nateraw/vit-age-classifier}
+\end{itemize}
+
+Estos modelos deberán ser descargados y movidos a la misma altura que la raíz del repositorio de trabajo.
+
+Finalmente se deberá ejecutar el script de shell llamado \textit{setup.sh}. Los cinco primeros comando de este script deben ser eliminados si no se utilizan los servidor GPU del Instituto DaSCI.
+
+\section{Inicio del sistema}
+
+El servidor que se ha desplegado en Heroku se estará ejecutando indefinidamente. Y en cuanto al servidor del Modelo para iniciar su ejecución se deberá ejecutar el siguiente comando a la altura de la carpeta \textit{server\_gpu}:
+
+\begin{center}
+    \textit{deepspeed $--$num\_gpus 1 main.py $--$config\_file configs/config\_server.json}
+\end{center}
+
+Tras la ejecución del comando y la finalización de la carga de todos los modelos que utiliza este servidor, el sistema estará disponible en su plenitud.
+
+
+\section{Generación de los conjuntos de datos de entrenamiento}
+
+En primer lugar, se deberá generar un conjunto de datos inicial mediante la extracción de información de la página Quora. La extracción del conjunto de datos inicial se realiza mediante el siguiente comando:
+
+\begin{center}
+    ./prueba\_extract.py $-$u ``<Correo de Quora>'' $-$p ``<Contraseña de Quora>'' $-$n <Número de ejemplos por Topic> $-$t <Ruta al archivo con la lista de Topics> $-$f <Ruta al archivo de salida>
+\end{center}
+
+Una vez finalizada la extracción del conjunto de datos inicial, procedemos a generar los conjuntos de datos de entrenamiento. Además del conjunto de datos extraído de Quora se pueden generar conjuntos de datos creados a mano, los cuales se concatenaran al conjunto de datos de Quora durante el pre procesado. Deberemos actualizar el archivo de configuración de generación de conjuntos de datos, \textit{config\_genDataset.json}, y posteriormente ejecutar el siguiente comando:
+
+\begin{center}
+    python generate\_dataset.py configs/config\_genDataset.json
+\end{center}
+
+Tras las ejecución de este comando, obtendremos los conjuntos de datos de entrenamiento en la ruta que se ha indicado en el archivo de configuración.
+
+
+\section{Entrenamiento de los modelos}
+
+Suponiendo que se han generado los conjuntos de datos de entrenamiento. Primeramente se deberá actualizar el archivo de configuración para el entrenamiento de cierto rango de edad, y posteriormente se ejecuta el siguiente comando:
+
+\begin{center}
+    python fine\_tuning.py configs/config\_finetuning\_child.json
+\end{center}
+
+En el caso del anterior comando, tras su finalización se obtendrá un modelo conversacional entrenado para el rango de edad de niños.
+

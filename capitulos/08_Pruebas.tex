@@ -113,9 +113,97 @@ Basándonos en los resultados de las pruebas, podemos indicar que el modelo acie
 
 \section{Pruebas sobre la generación de respuestas}
 
+En esta sección se probarán dos elementos del sistema. En primer lugar, el módulo traductor, ya que el modelo generador de respuestas trabaja con frases en inglés. Por lo tanto, será igual de importante realizar bien la traducción como generar bien la respuesta.
+
+Para comprobar la calidad de las traducciones efectuadas por DeepL, voy a efectuar varias traducciones de frases hechas que son originarias de España, las cuales no pueden ser traducidas literalmente para obtener su verdadero significado en inglés. Los resultados de las traducciones se pueden ver en la Tabla \ref{tab:pruebas_traduccion}.
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{Español}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Significado}} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Inglés}} \\ \hline
+Estoy hasta el moño      & \begin{tabular}[c]{@{}l@{}}Indica que ya no se puede soportar una \\ situación o a una persona\end{tabular} & I'm sick of it           \\ \hline
+Voy a pasar el puente en la playa &
+  \begin{tabular}[c]{@{}l@{}}Indica que se va a disfrutar de un \\ periodo breve de vacaciones\end{tabular} &
+  \begin{tabular}[c]{@{}l@{}}I'm going to spend the long \\ weekend at the beach\end{tabular} \\ \hline
+Cuesta un ojo de la cara & Indica que algo cuesta mucho dinero                                                                         & Costs a pretty penny     \\ \hline
+Meter la pata            & \begin{tabular}[c]{@{}l@{}}Indica que se ha fallado o fracasado en \\ una tarea o actividad\end{tabular}    & Screw up                 \\ \hline
+Estar metido en el ajo   & Indica que se está al corriente de algo                                                                     & To be in the thick of it \\ \hline
+\end{tabular}%
+}
+\caption{Pruebas de traducción con la API de DeepL}
+\label{tab:pruebas_traduccion}
+\end{table}
+
+Como se puede apreciar en la Tabla \ref{tab:pruebas_traduccion}, las traducciones de DeepL son de gran calidad, por lo que esta buena traducción facilitará la generación de respuestas y en consecuencia la comunicación con el chatbot.
+
+El segundo elemento a probar es el módulo generador de respuestas. Las pruebas a realizar sobre este módulo son clara. En este caso se expondrá una conversación de unas pocas de frases donde se verá como se desenvuelve el chatbot. Para estas pruebas se utilizará el chatbot para adultos, aunque es indiferente cuál de los modelos se elija. Las conversaciones realizadas para la prueba se pueden ver en la Tabla \ref{tab:pruebas_gen_respu_1} y en la Tabla \ref{tab:pruebas_gen_respu_2}.
 
 
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Emisor  & Texto enviado por el emisor                                              \\ \hline
+Usuario & Buenos días                                                              \\ \hline
+Chatbot & ¡Buenos días! ¿Cómo está usted?                                          \\ \hline
+Usuario & Me encuentro genial                                                      \\ \hline
+Chatbot & ¿A qué te dedicas?                                                       \\ \hline
+Usuario & Soy piloto de aviones comerciales                                        \\ \hline
+Chatbot & ¿Cuánto tiempo lleva siendo piloto comercial?                            \\ \hline
+Usuario & En febrero hago tres años de piloto                                      \\ \hline
+Chatbot & ¿Cómo se inicia en el pilotaje comercial?                                \\ \hline
+Usuario & Lo primero es ingresar en la escuela de vuelo                            \\ \hline
+Chatbot & ¿Cómo puedo transferir la información de mis pilotos de una plataforma a otra?                \\ \hline
+Usuario & Podemos dejar de hablar de trabajo porque he llegado cansado de trabajar \\ \hline
+Chatbot & ¿Qué hacen los acondicionadores de aire?                                 \\ \hline
+Usuario & Tengo entendido que se utilizan para refrescar o calentar una habitación \\ \hline
+Chatbot & ¿Cómo funcionan los aparatos de aire acondicionado?                      \\ \hline
+Usuario & No tengo ni idea. ¿Tú sabes como funcionan los aires acondicionados?     \\ \hline
+Chatbot & El aire acondicionado es un tipo de sistema que sirve para regular la temperatura de un lugar \\ \hline
+Usuario & ¿Pero cómo funcionan mecánicamente?                                      \\ \hline
+Chatbot & El aire convierte el calor en impulsos eléctricos en el aire             \\ \hline
+\end{tabular}%
+}
+\caption{Primera conversación de las pruebas del módulo de generación de respuestas}
+\label{tab:pruebas_gen_respu_1}
+\end{table}
 
 
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Emisor  & Texto enviado por el emisor                           \\ \hline
+Usuario & Hola. ¿Cómo te llamas?                                \\ \hline
+Chatbot & Me llamo Sara. ¿De qué te gustaría hablar?            \\ \hline
+Usuario & Decide tú porque yo hoy me encuentro fatal            \\ \hline
+Chatbot & ¿Por qué te sientes tan mal?                          \\ \hline
+Usuario & He tenido un día de perros                            \\ \hline
+Chatbot & Siento mucho escuchar eso                             \\ \hline
+Usuario & ¿Me puedes dar alguna solución para mejorar mi día?   \\ \hline
+Chatbot & No estoy seguro de lo que está hablando               \\ \hline
+Usuario & Dime maneras de mejorar un día malo                   \\ \hline
+Chatbot & ¿Hay alguna manera de hacer del mundo un lugar mejor? \\ \hline
+Usuario & Yo pienso que sí                                      \\ \hline
+Chatbot & ¿Te imaginas ser una persona mejor?                   \\ \hline
+\end{tabular}%
+}
+\caption{Segunda conversación de las pruebas del módulo de generación de respuestas}
+\label{tab:pruebas_gen_respu_2}
+\end{table}
+
+
+En la primera conversación (Tabla \ref{tab:pruebas_gen_respu_1}) se puede ver como el chatbot saluda adecuadamente, y seguidamente le pregunta por su profesión al usuario. Cuando este le indica su profesión empieza a interesarse por ella, preguntando por información sobre la profesión. Además, se puede ver como entiende cuando el usuario está cansado de un tema, sabe detectar cuál es el tema sobre el que estaba hablando y pasa a otro tema totalmente distinto, como son los aires acondicionados. El problema que se refleja en esta conversación es la inmovilidad del chatbot a cambiar de un entorno de pregunta-respuesta a un entorno más natural.
+
+En la segunda conversación (Tabla \ref{tab:pruebas_gen_respu_2}) se tiene un inicio distinto. En primer lugar, se realiza una presentación donde el chatbot indica su nombre y propone al usuario indicar un tema de conversación. Seguidamente, el usuario no sugiere un tema de conversación, he indica su estado de ánimo y el chatbot es capaz de detectar que no ha indicado un tema y se muestra empático con el usuario interesándose de la causa de su estado de ánimo. El usuario indica la causa de su estado de ánimo con una frase hecha y aun así el chatbot sabe identificar que se trata de una causa mala e intenta consolar al usuario. Por último, el usuario le solicita al chatbot soluciones para mejorar su estado de ánimo y el chatbot entra otra vez en un modo pregunta-respuesta relacionado con el tema de mejorar una situación. El chatbot pregunta en primer punto sobre como se puede mejorar el mundo y después como puede mejorar una persona. Como se puede apreciar en esta fase final de la conversación, volvemos a la misma situación de inmovilidad del chatbot, al igual que pasaba en la primera conversación.
 
 

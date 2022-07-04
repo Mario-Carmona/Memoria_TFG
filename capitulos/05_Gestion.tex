@@ -4,11 +4,11 @@ En este capítulo se detalla la gestión realizada de todos los elementos involu
 
 \section{Gestión del código y de la documentación}
 
-Por supuesto, una parte fundamental de un proyecto TIC es el código y la documentación. Estos dos elementos son la base de todo el proyecto, por lo que habrá que gestionarlos de forma eficiente y correcta.
+Por supuesto, una parte fundamental de un proyecto \gls{TIC} es el código y la documentación. Estos dos elementos son la base de todo el proyecto, por lo que habrá que gestionarlos de forma eficiente y correcta.
 
-Dado que son cruciales, será imprescindible asegurar su seguridad ante pérdidas, ya que son elementos sobre los que se invierte mucho tiempo. Siguiendo el plan de actuación contra el riesgo de perder información del proyecto, se efectuarán backup y controles de versiones de ambos elementos.
+Dado que son cruciales, será imprescindible asegurar su seguridad ante pérdidas, ya que son elementos sobre los que se invierte mucho tiempo. Siguiendo el plan de actuación contra el riesgo de perder información del proyecto, se efectuarán \gls{backup} y controles de versiones de ambos elementos.
 
-En primer lugar, para la gestión del código, en vez de alojar simplemente este código de manera local, lo que suele hacer en la mayoría de los proyectos actuales es crear un repositorio privado, llamado \href{https://github.com/Mario-Carmona/SARA_Chatbot}{SARA\_Chatbot}, en la plataforma GitHub \footnote{\url{https://github.com}}. Una vez tenemos un repositorio privado donde tener un sistema de control de versiones a la vez que sirve de backup, es necesario sincronizar este repositorio que está en la nube, con un repositorio local para poder trabajar con el código. A través de esta sincronización se irán actualizando ambos repositorios conforme se vaya modificando el código y el programador vaya enviando commits. Un commit no es más que una petición para guardar los cambios en el sistema de control de versiones del repositorio privado en GitHub. Para la edición de todo el código se hará uso del editor de código Visual Studio Code.
+En primer lugar, para la gestión del código, en vez de alojar simplemente este código de manera local, lo que suele hacer en la mayoría de los proyectos actuales es crear un repositorio privado, llamado \href{https://github.com/Mario-Carmona/SARA_Chatbot}{SARA\_Chatbot}, en la plataforma GitHub \footnote{\url{https://github.com}}. Una vez tenemos un repositorio privado donde tener un sistema de control de versiones a la vez que sirve de \gls{backup}, es necesario sincronizar este repositorio que está en la nube, con un repositorio local para poder trabajar con el código. A través de esta sincronización se irán actualizando ambos repositorios conforme se vaya modificando el código y el programador vaya enviando commits. Un commit no es más que una petición para guardar los cambios en el sistema de control de versiones del repositorio privado en GitHub. Para la edición de todo el código se hará uso del editor de código Visual Studio Code.
 
 Y en segundo lugar, para la gestión de la documentación, de igual modo que se hace con el código, se alojará en GitHub, aunque se gestionará de una forma distinta a la realizada con el código. De igual modo, se creará un repositorio privado, llamado \href{https://github.com/Mario-Carmona/Memoria_TFG}{Memoria\_TFG}; y un repositorio local. La diferencia con la gestión del código llega a la hora de la edición de la documentación. Para la edición de la documentación se hará empleo de la plataforma online Overleaf \footnote{\url{https://es.overleaf.com}}, una de las plataformas más empleadas para la edición de documentos escritos en LaTeX. La gestión de la documentación se podría hacer sin necesidad de tener un repositorio local, dado que Overleaf tiene una herramienta para sincronizar los proyectos alojados en Overleaf con repositorios de GitHub. Pero como para efectuar esta sincronización con Overleaf es necesaria una cuenta de pago, y una de las prioridades de este proyecto es minimizar el uso de recursos de pago, para simular esta sincronización se ha creado un repositorio local y además se ha creado un script para la descarga del proyecto completo de la plataforma Overleaf y su posterior movimiento al repositorio local. Además, opcionalmente se puede usar el script para realizar el movimiento del proyecto descargado y un posterior commit al repositorio en Github.
 
@@ -77,6 +77,11 @@ Fuente: \url{https://www.heroku.com/pricing}
 
 \item \textbf{BlenderBot}: Es una herramienta de software libre para la creación del chatbot.
 \item \textbf{Dialogflow}: Es una herramienta para el despliegue del chatbot. Se hará uso de la versión gratuita de la herramienta.
+\item \textbf{SweetAlert2}: SweetAlert es un plugin de jQuery y con el cual podremos dar un aspecto profesional a los mensajes que lancemos a los usuarios acorde a las tendencias actuales. Además, tenemos la posibilidad de configurar el plugin de muchas formas diferentes.
+\item \textbf{Docker}: Docker es un proyecto de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.
+\item \textbf{Uvicorn}: Uvicorn es una implementación de servidor web ASGI para Python.
+\item \textbf{FastAPI}: FastAPI es un marco de trabajo moderno, rápido (de alto rendimiento), para la construcción de API's con Python 3.6+ basado en sugerencias de tipo estándar de Python.
+\item \textbf{Ngrok}: Ngrok es un servicio que nos permite crear nuestro servidor local en un subdominio para poder visualizarlo fuera de la LAN, a través de internet.
 \end{itemize}
 
 \subsection{Recursos de comunicación y documentación} \label{subsec:recur_comu_docu}
@@ -128,7 +133,7 @@ Además, dentro de cada día laborable hay una jornada laboral. Normalmente, est
 $Horas\ laborables\ =\ Dias\ laborables\ *\ 5\ horas/dia\ =\ 550\ horas$
 \end{center}
 
-Este número de horas excede en gran medida el número de horas correspondientes a los ECTS de un TFG. El número mínimo de horas que se debe emplear en el desarrollo de un TFG deben ser 300 horas.
+Este número de horas excede en gran medida el número de horas correspondientes a los \gls{ECTS} de un TFG. El número mínimo de horas que se debe emplear en el desarrollo de un TFG deben ser 300 horas.
 
 Una vez tenemos el tiempo trabajado por el ingeniero, es necesario obtener que salario tiene este trabajador a la hora. Para obtener esta información me he basado en el estudio de la página talent.com \footnote{\url{https://acortar.link/MiqarT}}. En este estudio se analiza el sueldo medio de un ingeniero informático en España, el salario medio es de 2.208 \EURtm al mes. Por lo tanto, el salario medio por hora será de 13,59 \EURtm.
 
@@ -230,24 +235,26 @@ Factura de la luz & 25,00 \EURtm  \\ \midrule
 Para tener una visión global de todos los costes analizados se ha elaborado una tabla donde se desglosa toda la información de cada apartado y finalmente se calcula el coste acumulado de todo el proyecto. Estos datos se pueden ver en la Tabla \ref{tab:presupuesto_total}.
 
 
-\begin{longtable}[c]{@{}lr@{}}
-\toprule
+\begin{longtable}[c]{lr}
+\hline
 \textbf{Recurso}                     & \textbf{Importe}                       \\
+\endfirsthead
+%
 \endhead
 %
-\bottomrule
+\hline
 \endfoot
 %
 \endlastfoot
 %
-                                     &                                        \\* \midrule
+                                     &                                        \\ \hline
 \textbf{Costes de recursos humanos}  & \textbf{7474,50 \EURtm} \\
                                      & \multicolumn{1}{l}{}                   \\
-Trabajo autónomo                     & 7474,50 \EURtm          \\* \midrule
+Trabajo autónomo                     & 7474,50 \EURtm          \\ \hline
 \textbf{Costes de recursos materiales}                      & \textbf{91,66 \EURtm} \\
                                      & \multicolumn{1}{l}{}                   \\
 Portátil personal                    & 91,66 \EURtm            \\
-Servidores GPU del Instituto DaSCI             & 0,00 \EURtm             \\* \midrule
+Servidores GPU de la UGR             & 0,00 \EURtm             \\ \hline
 \textbf{Costes de recursos software} & \textbf{0,00 \EURtm}    \\
                                      & \multicolumn{1}{l}{}                   \\
 Sistema Operativo                    & 0,00 \EURtm             \\
@@ -256,7 +263,12 @@ Git                                  & 0,00 \EURtm             \\
 Visual Studio Code                   & 0,00 \EURtm             \\
 Heroku                               & 0,00 \EURtm             \\
 BlenderBot                           & 0,00 \EURtm             \\
-Dialogflow                           & 0,00 \EURtm             \\* \midrule
+Dialogflow                           & 0,00 \EURtm             \\
+SweetAlert2                          & 0,00 \EURtm             \\
+Docker                               & 0,00 \EURtm             \\
+Uvicorn                              & 0,00 \EURtm             \\
+FastAPI                              & 0,00 \EURtm             \\
+Ngrok                                & 0,00 \EURtm             \\ \hline
 \textbf{Costes de recursos de comunicación y documentación} & \textbf{0,00 \EURtm}  \\
                                      & \multicolumn{1}{l}{}                   \\
 Google Meet                          & 0,00 \EURtm             \\
@@ -264,13 +276,13 @@ Correo UGR                           & 0,00 \EURtm             \\
 Overleaf                             & 0,00 \EURtm             \\
 Texmaker                             & 0,00 \EURtm             \\
 Visual Paradigm                      & 0,00 \EURtm             \\
-Microsoft Powerpoint                 & 0,00 \EURtm             \\* \midrule
+Microsoft Powerpoint                 & 0,00 \EURtm             \\ \hline
 \textbf{Costes adicionales}          & \textbf{175,00 \EURtm}  \\
                                      & \multicolumn{1}{l}{}                   \\
 Internet                             & 150,00 \EURtm           \\
 Factura de la luz                    & 25,00 \EURtm            \\
-                                     & \multicolumn{1}{l}{}                   \\* \midrule
-\multicolumn{1}{r}{\textbf{Total:}}  & \textbf{7741,16 \EURtm} \\* \bottomrule
+                                     & \multicolumn{1}{l}{}                   \\ \hline
+\multicolumn{1}{r}{\textbf{Total:}}  & \textbf{7741,16 \EURtm} \\ \hline
 \caption{Presupuesto total del proyecto}
 \label{tab:presupuesto_total}
 \end{longtable}
